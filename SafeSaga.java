@@ -8,6 +8,8 @@ public class SafeSaga {
         System.out.println("Bem Vindo ao Safe Saga.");
 
         System.out.println("Introdução: ");
+        
+        System.out.print("Alex passou por aqui");
     
     
     }
