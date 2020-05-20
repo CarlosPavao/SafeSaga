@@ -66,9 +66,6 @@ public class NewClass {
              + " de tudo isso e você se sentir parte dessa história, e o intuito\n"
              + " desse jogo é para que você possa se divertir muito, recomendado\n"
              + " a todos os públicos.");
-             System.out.println();
-             System.out.println("Este livro será compartilhado em um PDF\n"
-             + " editável na ficha do personagem para que possam manter as\n" +
-               "anotações necessárias durante todo jogo.");
+
     }       
 }
