@@ -19,6 +19,7 @@ public class NewClass {
         
     
         Scanner entrada = new Scanner(System.in);
+        String enter;
 
         System.out.println("                Bem Vindo ao Safe Saga.");
         System.out.println();
@@ -42,11 +43,32 @@ public class NewClass {
             System.out.println("       Venha se divertir com essa história envolvente.");
             System.out.println();
     
-            //Talvez adicionar um "enter" para mudar de tela.
+            //Talvez adicionar um "enter".
+            {
             System.out.println("Pressione o enter para continuar:");
-            entrada.nextLine();
-            
+            enter = entrada.nextLine();
+            }
             //Ver algo para limpar a tela antes de exibir esta.
-            System.out.println("                Como jogar");
+             System.out.println("                Como jogar");
+            
+             System.out.println("Safe Saga é um jogo bem simples de ser\n"
+             + " jogado, basta seguir as instruções de parágrafo que o livro\n"+
+               "mandar você e à medida que vai avançando entenderá melhor e\n"
+             + " vera que é bem simples de jogar à medida que alcançar a fase\n"
+             + " dos desafios poderá utilizar suas habilidades escolhidas, use\n"
+             + " a ficha do personagem para manter sempre atualizado as\n"
+             + " informações de como está indo no jogo, a cada desafio que você\n"
+             + " perde para o hacker, 25% dos seus dados serão disponibilizados\n"
+             + " para todas as pessoas que queiram na internet, o objetivo é\n"
+             + " chegar ao final do livro perdendo o mínimo possível de dados e\n"
+             + " a única maneira de isso acontecer e você errando o mínimo\n"
+             + " possível durante o desenrolar de nossa história, o mais legal\n"
+             + " de tudo isso e você se sentir parte dessa história, e o intuito\n"
+             + " desse jogo é para que você possa se divertir muito, recomendado\n"
+             + " a todos os públicos.");
+             System.out.println();
+             System.out.println("Este livro será compartilhado em um PDF\n"
+             + " editável na ficha do personagem para que possam manter as\n" +
+               "anotações necessárias durante todo jogo.");
     }       
 }
