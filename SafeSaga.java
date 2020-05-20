@@ -40,3 +40,13 @@ public class NewClass {
                 + "nossos dados que cada dia que passa se torna mais e mais importante.");
             System.out.println();
             System.out.println("       Venha se divertir com essa história envolvente.");
+            System.out.println();
+    
+            //Talvez adicionar um "enter" para mudar de tela.
+            System.out.println("Pressione o enter para continuar:");
+            entrada.nextLine();
+            
+            //Ver algo para limpar a tela antes de exibir esta.
+            System.out.println("                Como jogar");
+    }       
+}
