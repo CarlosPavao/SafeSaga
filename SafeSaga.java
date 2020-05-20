@@ -6,7 +6,7 @@ import java.util.Scanner;
  */
 
 /**
- * Autores:
+Autores:
 • Alexsandro da Silva Ramos
 • Carlos Henrique Pavão Inácio
 • Patricia Ferreira de Sousa
