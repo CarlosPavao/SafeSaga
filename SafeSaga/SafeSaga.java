@@ -34,7 +34,38 @@ public class SafeSaga {
           System.out.println("6 - Visão além do alcance - revela a resposta correta.");
 
   }
-  public static void escolhaHabilidade(){
+  public static int escolhaHabilidade(int habilidade){
+    int pular = 0;int sorte =0; int tenteNovamente = 0;
+        int bonusPorAcerto = 0; int ajudaDosUniversitarios = 0; int visaoAlemDoAlcance = 0;int cont=0;
+    
+        switch(habilidade){
+      case 1:
+          pular++;
+          cont++;
+        break;
+        case 2:
+          sorte++;
+          cont++;
+        break;
+        case 3:
+          tenteNovamente++;
+          cont++;
+        break;
+        case 4:
+          bonusPorAcerto++;
+          cont++;
+        break;
+        case 5:
+          ajudaDosUniversitarios++;
+          cont++;
+        break;
+        case 6:
+        cont++;  
+        visaoAlemDoAlcance++;
+        break;
+        default:System.out.println("Opção invalida"); 
+      }
+      return habilidade;
     
   }
   public static void main(String[] args) {
@@ -56,69 +87,66 @@ public class SafeSaga {
           System.out.println("Como vai se chamar seu personagem?");
           String nomePersonagem = entrada.next();
         
-          habilidade();
-         do{
+        habilidade();
+        
+        for( habilidade =0; habilidade <=5;i++){
+          habilidade = entrada.nextInt();
+        
+        escolhaHabilidade(habilidade); 
            
-          habilidade=entrada.nextInt();
-          
-          switch(habilidade){
-              case 1:
-                pular++;
-                i++;
-              break;
-              case 2:
-                sorte++;
-                i++;
-              break;
-              case 3:
-                tenteNovamente++;
-                i++;
-                break;
-              case 4:
-                bonusPorAcerto++;
-                i++;
-              break;
-              case 5:
-                ajudaDosUniversitarios++;
-                i++;
-              break;
-              case 6:
-                visaoAlemDoAlcance++;
-                i++;
-              break;
-            default:System.out.println("Opção invalida"); 
-          }
-         
-          System.out.println("Você já escolheu "+i+" habilidades.");
-        }while(i<=4);
-        
-        
-        System.out.println("Voce escolheu as seguintes habilidades: ");
-        System.out.println();
-        
-        if(pular>0){
+      
+      switch(habilidade){
+        case 1:
+          pular++;
           System.out.println(pular+" Pular.");
-        }if(sorte>0){
-          System.out.println(pular+" Sorte.");
-        }if (tenteNovamente>0){
-          System.out.println(tenteNovamente+" Tente Novamente.");
-        }if(bonusPorAcerto>0){
-          System.out.println(bonusPorAcerto+" Bonus Por Acerto.");
-        }if(ajudaDosUniversitarios>0){
-          System.out.println(ajudaDosUniversitarios+" Ajuda dos Universitários.");
-        }if(visaoAlemDoAlcance > 0){
-          System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
+        break;  
+        case 2:
+          sorte++;
+          System.out.println(sorte+" Sorte.");
+        break;
+        case 3:
+            tenteNovamente++;
+            System.out.println(tenteNovamente+" Tente Novamente.");
+        break;
+        case 4:
+            bonusPorAcerto++;
+            System.out.println(bonusPorAcerto+" Bonus Por Acerto.");
+        break;
+        case 5:
+            ajudaDosUniversitarios++;
+            System.out.println(ajudaDosUniversitarios+" Ajuda dos Universitários.");
+        break;
+        case 6:
+            visaoAlemDoAlcance++;
+            System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
+        break;
         }
+      habilidade++;
+      }
+      System.out.println("Voce escolheu as seguintes habilidades: ");
+      System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
+      System.out.println(ajudaDosUniversitarios+" Ajuda dos Universitários.");
+      System.out.println(bonusPorAcerto+" Bonus Por Acerto.");
+      System.out.println(tenteNovamente+" Tente Novamente.");
+      System.out.println(sorte+" Sorte.");
+      System.out.println(pular+" Pular.");
+      do{
+          
         System.out.println("Voce confirma as habilidade:\n1-Sim\n2-Não");
         confirma=entrada.nextInt();
 
+      }while(confirma!=1);
   
            
           break;    
           case 2:
            System.out.println("               Instruções: ");
-           
-            System.out.println("");
+
+           System.out.println("Digite o numero 0 para retornar ao menu" );
+           opcao = entrada.nextInt();
+           if(opcao ==0){      
+            menu();
+           }
           break;
           case 3:
           
