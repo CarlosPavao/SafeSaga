@@ -15,13 +15,17 @@ Autores:
 • Vinicius Da Silva Alves
  */
 public class SafeSaga {
-  public static void menu(){
+  static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
 		System.out.println("                  |       1 - Jogar       |");
 		System.out.println("                  |     2 - instruções    |");
 		System.out.println("                  |      3 - Creditos     |");
     System.out.println("                  =========================\n");
+    Scanner entrada = new Scanner(System.in);
+    System.out.println("Digite a opção desejada");
+    return entrada.nextInt();
+
   }
   public static void habilidade(){
     System.out.println("\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode ser escolhida mais de uma vez.");
@@ -72,13 +76,11 @@ public class SafeSaga {
           
         Scanner entrada = new Scanner(System.in);
         
-        int totaldehabilidade = 0;int pular = 0;int sorte =0; int tenteNovamente = 0;
+        int pular = 0;int sorte =0; int tenteNovamente = 0;
         int bonusPorAcerto = 0; int ajudaDosUniversitarios = 0; int visaoAlemDoAlcance = 0;
         int i=0;int confirma =0;int habilidade=0;
 
-    menu();
-    int opcao = entrada.nextInt();
-
+        int opcao = menu();
     
         switch(opcao){
           case 1:
@@ -94,7 +96,7 @@ public class SafeSaga {
         
         escolhaHabilidade(habilidade); 
            
-      
+        habilidade++; 
       switch(habilidade){
         case 1:
           pular++;
@@ -121,7 +123,7 @@ public class SafeSaga {
             System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
         break;
         }
-      habilidade++;
+      
       }
       System.out.println("Voce escolheu as seguintes habilidades: ");
       System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
@@ -144,9 +146,6 @@ public class SafeSaga {
 
            System.out.println("Digite o numero 0 para retornar ao menu" );
            opcao = entrada.nextInt();
-           if(opcao ==0){      
-            menu();
-           }
           break;
           case 3:
           
