@@ -29,14 +29,13 @@ public class SafeSaga {
   }
   public static void habilidade(){
     System.out.println("\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode ser escolhida mais de uma vez.");
-          System.out.println();
-          System.out.println("1 - Pular - Caso não saiba a resposta pula o desafio do Hacker.");
-          System.out.println("2 - Sorte - Jogue dois dados se o resultado for maior que 7 você passa esse desafio.");
-          System.out.println("3 - Tente Novamente - você tem a oportunidade de responder novamente caso errou.");
-          System.out.println("4 - Bônus por acerto - Permite pular uma questão após 3 acertos consecultivos.");
-          System.out.println("5 - Ajuda dos Universitarios - Fica somente Duas alternativas do desafio.");
-          System.out.println("6 - Visão além do alcance - revela a resposta correta.");
-
+    System.out.println();
+    System.out.println("1 - Pular - Caso não saiba a resposta pula o desafio do Hacker.");
+    System.out.println("2 - Sorte - Jogue dois dados se o resultado for maior que 7 você passa esse desafio.");
+    System.out.println("3 - Tente Novamente - você tem a oportunidade de responder novamente caso errou.");
+    System.out.println("4 - Bônus por acerto - Permite pular uma questão após 3 acertos consecultivos.");
+    System.out.println("5 - Ajuda dos Universitarios - Fica somente Duas alternativas do desafio.");
+    System.out.println("6 - Visão além do alcance - revela a resposta correta.");
   }
   public static int escolhaHabilidade(int habilidade){
     int pular = 0;int sorte =0; int tenteNovamente = 0;
@@ -75,10 +74,10 @@ public class SafeSaga {
   public static void main(String[] args) {
           
         Scanner entrada = new Scanner(System.in);
-        
-        int pular = 0;int sorte =0; int tenteNovamente = 0;
-        int bonusPorAcerto = 0; int ajudaDosUniversitarios = 0; int visaoAlemDoAlcance = 0;
-        int i=0;int confirma =0;int habilidade=0;
+    
+        int []habilidade = new int [5];
+                
+        int confirma =0;
 
         int opcao = menu();
     
@@ -90,48 +89,34 @@ public class SafeSaga {
           String nomePersonagem = entrada.next();
         
         habilidade();
-        
-        for( habilidade =0; habilidade <=5;i++){
-          habilidade = entrada.nextInt();
-        
-        escolhaHabilidade(habilidade); 
-           
-        habilidade++; 
-      switch(habilidade){
-        case 1:
-          pular++;
-          System.out.println(pular+" Pular.");
-        break;  
-        case 2:
-          sorte++;
-          System.out.println(sorte+" Sorte.");
-        break;
-        case 3:
-            tenteNovamente++;
-            System.out.println(tenteNovamente+" Tente Novamente.");
-        break;
-        case 4:
-            bonusPorAcerto++;
-            System.out.println(bonusPorAcerto+" Bonus Por Acerto.");
-        break;
-        case 5:
-            ajudaDosUniversitarios++;
-            System.out.println(ajudaDosUniversitarios+" Ajuda dos Universitários.");
-        break;
-        case 6:
-            visaoAlemDoAlcance++;
-            System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
-        break;
+        for(int i = 0; i < 5; i++){
+          habilidade[i] = entrada.nextInt();
         }
-      
-      }
       System.out.println("Voce escolheu as seguintes habilidades: ");
-      System.out.println(visaoAlemDoAlcance+ "Visão além do alcance.");
-      System.out.println(ajudaDosUniversitarios+" Ajuda dos Universitários.");
-      System.out.println(bonusPorAcerto+" Bonus Por Acerto.");
-      System.out.println(tenteNovamente+" Tente Novamente.");
-      System.out.println(sorte+" Sorte.");
-      System.out.println(pular+" Pular.");
+      for(int i = 0;i<habilidade.length;i++ ){
+        switch(habilidade[i]){
+          case 1:
+            System.out.println("Habilidade["+(i+1)+"] "+habilidade[i]+" - Pular");
+          break;
+          case 2:
+            System.out.println("Habilidade["+(i+1)+"] "+habilidade[i]+" - Sorte");
+          break;
+          case 3:
+            System.out.println("Habilidade["+(i+1)+"] "+habilidade[i]+" - Tente Novamente");
+          break;
+          case 4:
+            System.out.println("Habilidade["+(i+1)+"] "+habilidade[i]+" - Bonus por acerto");
+          break;
+          case 5:
+            System.out.println("Habilidade["+(i+1)+"] "+habilidade[i]+" - Ajuda dos universitários");
+          break;
+          case 6:
+            System.out.println("Habilidade["+(i+1)+"] "+habilidade[i]+" - Visão alem do alcance");
+          break;
+        }
+        
+      }
+      
       do{
           
         System.out.println("Voce confirma as habilidade:\n1-Sim\n2-Não");
