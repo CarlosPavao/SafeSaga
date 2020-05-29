@@ -157,6 +157,6 @@ public class SafeSaga {
         case 3:
 
       }
-    }while(retornar == 0 && retornar != 4); 
+    }while(retornar == 0 || retornar != 4); 
   }  
 }
