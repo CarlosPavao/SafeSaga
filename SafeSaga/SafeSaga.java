@@ -196,6 +196,67 @@ import java.util.Scanner;
               + " período de avaliação. O hacker pensou e teve dó de você e"
               + " decidiu propor um desafio para liberar o seu computador.");
   }
+  static int decisao4(){
+      System.out.println(" Você dispensa o happy hour com os amigos e alega que"
+              + " é novo no serviço e precisa mostrar trabalho. E durante o "
+              + "caminho você lembra que precisa comprar um jogo para testar "
+              + "seu novo computador.");
+                System.out.println(" E fica a dúvida passar ou não na loja"
+                        + " para comprar um jogo? ");
+                Scanner entrada = new Scanner (System.in);
+                               
+                System.out.println("1-) Vai na loja de games.  ");
+                System.out.println("2-) Direto para a sua casa  ");
+                
+                return entrada.nextInt();
+  }
+  public static void decisao4Escolha1(){
+      System.out.println(" Na loja de games você nota que o preço do jogo"
+              + " interessado era muito alto e no momento estava sem dinheiro"
+              + " para compra-lo devido sua recente compra do computador."
+              + "Você abandona a loja e volta para o caminho da sua casa e lá"
+              + " lembra do CD que seu amigo achou no banheiro do boteco. "
+              + "Chegando na sua casa você corre para ver o conteúdo da mídia e"
+              + " logo percebe que se trata-se de um jogo. E logo o jogo que"
+              + " você queria comprar, ansioso você nem pensa duas vezes para"
+              + " instala-lo. A instalação do jogo fluí normalmente e no final"
+              + " da instalação o programa pede para reiniciar o computador."
+              + " Após iniciado o sistema operacional você percebe tem algo"
+              + " muito estranho, várias janelas pretas sendo abertas e fechando"
+              + " sozinho.  E do nada o sistema abre o bloco de notas com a"
+              + " mensagem “Olá fulano seu computador foi hackeado e para "
+              + "libera-lo você terá que pagar uma quantia de 5.000 mil reais”."
+              + " Você desesperado responde ao hacker que não tem o dinheiro e "
+              + "que é novo no trabalho e tinha completado 2 meses recentemente "
+              + "e tem uma tarefa do serviço para fazer se não fizer pode até "
+              + "pode ser mandado embora como está no período de avaliação. "
+              + "O hacker pensou e teve dó de você e decidiu propor um desafio "
+              + "para liberar o seu computador.");
+  }
+  public static void decisao4Escolha2(){
+      System.out.println("Você foi direto para a sua casa e decide logo jantar "
+              + "para matar a fome que o incomodava. Após a refeição você decide"
+              + " ver o conteúdo da mídia no seu PC. De imediato foi executado "
+              + "um pacote de instalação de um jogo e você estava ansioso para "
+              + "testar o desempenho do seu novo computador e um jogo era tudo o"
+              + " que você queria. Você inicia a instalação sem nem pensar duas "
+              + "vezes e no final o programa pede para reiniciar o computador. "
+              + "Após iniciado o sistema operacional você percebe tem algo muito"
+              + " estranho, várias telas pretas aparecem durante a inicialização do"
+              + " Windows.  E do nada o sistema abre o bloco de notas com a "
+              + "mensagem “Olá fulano seu computador foi hackeado e para libera-lo"
+              + " você terá que pagar uma quantia de 5.000 mil reais”."
+              + "Você em um primeiro momento não acredita e pediu provas para o"
+              + " hacker e ele solicitou para você tentar abrir um documento e "
+              + "o documento solicitado era justo o trabalho que seu chefe tinha"
+              + " solicitado para você fazer. Em choque você entra em desespero "
+              + "e responde ao hacker que não tem o dinheiro e como é novo no "
+              + "trabalho e só tinha 2 meses serviço e este documento tem que "
+              + "ser entregue na segunda-feira se não pode até ser mandado "
+              + "embora como está no período de experiência."
+              +" O hacker pensou e teve dó de você e decidiu propor um desafio"
+              + " para liberar o seu computador. ");
+  }
   
           
   public static void main(String[] args) {
@@ -285,7 +346,12 @@ import java.util.Scanner;
               }
               break;
             case 4:
-
+               decisao = decisao4();
+              if(decisao == 1){
+                 decisao4Escolha1();
+              } else if (decisao == 2){
+                  decisao4Escolha2();
+              }
               break;
               
           }
