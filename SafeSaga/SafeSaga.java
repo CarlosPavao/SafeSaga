@@ -10,7 +10,6 @@ import java.util.Scanner;
  * Patricia Ferreira de Sousa • Renan Ferreira Novaes • Rodrigo Dias • Vinicius
  * Da Silva Alves
  */
-public class SafeSaga {
   static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
@@ -47,7 +46,7 @@ public class SafeSaga {
     System.out.println("1- ) Ficar até mais tarde no trabalho."); 
     System.out.println("2- ) Sair no horário e passar no Mc2000 para comprar um Big2000."); 
     System.out.println("3- ) Happy hour. "); 
-    System.out.println("3- ) Ir para casa e terminar a tarefa designada a você."); 
+    System.out.println("4- ) Ir para casa e terminar a tarefa designada a você."); 
     Scanner entrada = new Scanner(System.in);
     System.out.println("Digite a opção desejada");
     return entrada.nextInt();
@@ -139,6 +138,50 @@ public class SafeSaga {
     "se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair bem com tudo isso, "+
     "mais forte!!");
   }
+  static int decisao3() {
+      System.out.println("Você sai do serviço às 18:00 e vai com seus amigos"
+              + " para aquele momento happy hour e decide executar a tarefa dada"
+              + " em casa no final de semana, pois ninguém é de ferro. Depois de"
+              + " algumas bebidas você vai para o banheiro e lá você encontra um"
+              + " CD em uma capa com a etiqueta “presente de grego”. E você pensa... ");
+      System.out.println();
+      System.out.println(" Você pegar ou não o CD? ");
+      System.out.println("1-) Você pega o CD.");
+      System.out.println("2-) Você não pega o CD. ");
+          Scanner entrada = new Scanner (System.in);
+          
+    return entrada.nextInt();
+     }
+  public static void decisao3Escolha1(){
+      System.out.println(" Você pega o CD e nem comenta para seus amigos sobre"
+              + " ele. Depois mais algumas bebidas você sente que chegou no seu"
+              + " limite e se despede dos parceiros e vai para sua casa, curioso"
+              + " para saber o que poderia ter de conteúdo no CD.");
+  }
+  public static void decisao3Escolha2(){
+      System.out.println(" Você decide não pegar o CD, usa o banheiro e retorna"
+              + " para as bebidas juntos com os amigos. Logo depois de um tempo"
+              + " um de seus amigos vai ao banheiro e encontra o CD leva-o para"
+              + " a roda de amigos e fala sobre ele. E de todos os que estavam"
+              + " na mesa você era o único com computador em casa e logo você"
+              + " decide ficar com a mídia.Na sua casa você já vai para o seu"
+              + " computador e vai ler o CD encontrado e logo é iniciado um"
+              + " programa de instalação de um jogo que por coincidência você"
+              + " estava louco para comprar. A instalação do jogo fluí"
+              + " normalmente e no final da instalação o programa pede para"
+              + " reiniciar o computador. Após iniciado o sistema operacional"
+              + " você percebe tem algo muito estranho.  E do nada o sistema"
+              + " abre o bloco de notas com a mensagem “Olá fulano seu "
+              + "computador foi hackeado e para libera-lo você terá que"
+              + " pagar uma quantia de 5.000 mil reais”. Você desesperado"
+              + " responde ao hacker que é novo no trabalho e tinha completado"
+              + " 2 meses recentemente e tem uma tarefa do serviço para fazer"
+              + " se não fizer pode até pode ser mandado embora como está no"
+              + " período de avaliação. O hacker pensou e teve dó de você e"
+              + " decidiu propor um desafio para liberar o seu computador.");
+  }
+  
+          
   public static void main(String[] args) {
 
     Scanner entrada = new Scanner(System.in);
@@ -186,11 +229,11 @@ public class SafeSaga {
                   break;
               }
             }
-            System.out.println("Voce confirma as habilidade:\n1-Sim\n2-Não");
+            System.out.println("Você confirma as habilidade:\n1-Sim\n2-Não");
             confirma = entrada.nextInt();
             
             if(confirma ==2){
-              System.out.println("Qual habilidade vc deseja trocar?");
+              System.out.println("Qual habilidade você deseja trocar?");
               int troca = entrada.nextInt();
             }
           } while (confirma != 1);
@@ -212,13 +255,18 @@ public class SafeSaga {
               decisao = decisao2();
               if(decisao == 1){
                   decisao2Escolha1();
-              }if(decisao ==2){
+              }else if(decisao ==2){
                 decisao2Escolha2();
               }
               decisao2Final();
               break;
             case 3:
-
+              decisao = decisao3();
+              if(decisao == 1){
+                 decisao3Escolha1();
+              } else if (decisao == 2){
+                  decisao3Escolha2();
+              }
               break;
             case 4:
 
@@ -229,7 +277,7 @@ public class SafeSaga {
 
 
           break;
-        case 2:
+        case 5:
           System.out.println("               Instruções: ");
 
           System.out.println("Digite o número 0 para retornar ao menu");
@@ -237,10 +285,11 @@ public class SafeSaga {
           decisao = entrada.nextInt();
 
           break;
-        case 3:
+        case 6:
 
       }
     }while(decisao != 0 ); 
-    System.out.println("Fim de jogo, Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso");
+    System.out.println("Fim de jogo!"
+            + " Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso");
   }  
 }
