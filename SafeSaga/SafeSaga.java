@@ -156,7 +156,23 @@ import java.util.Scanner;
       System.out.println(" Você pega o CD e nem comenta para seus amigos sobre"
               + " ele. Depois mais algumas bebidas você sente que chegou no seu"
               + " limite e se despede dos parceiros e vai para sua casa, curioso"
-              + " para saber o que poderia ter de conteúdo no CD.");
+              + " para saber o que poderia ter de conteúdo no CD. Na sua casa"
+              + " você já vai para o seu computador e vai logo ler o CD "
+              + "encontrado e de inicio é iniciado um programa de instalação de"
+              + " um jogo que por coincidência você estava louco para comprar."
+              + " Você inicia a instalação do jogo normalmente e no final da "
+              + "instalação o programa pede para reiniciar o computador. Após"
+              + " iniciado o sistema operacional você percebe que tem algo de"
+              + " muito estranho, várias janelas sendo abertas e fechadas "
+              + "automaticamente durante inicialização do sistema operacional."
+              +" E do nada o sistema abre o bloco de notas com a"
+              + " mensagem “Olá fulano seu computador foi hackeado e para"
+              + " libera-lo você terá que pagar um valor de 5.000 mil reais”."
+              + " Você desesperado responde ao hacker que é novo no trabalho e"
+              + " tinha completado 2 meses recentemente e tem uma tarefa do"
+              + " serviço para fazer se não fizer pode até ser mandado embora"
+              + " como está no período de avaliação. O hacker pensou e decidiu"
+              + " propor um desafio para liberar o seu computador.");
   }
   public static void decisao3Escolha2(){
       System.out.println(" Você decide não pegar o CD, usa o banheiro e retorna"
