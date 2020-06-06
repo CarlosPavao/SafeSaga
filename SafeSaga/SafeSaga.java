@@ -1419,10 +1419,10 @@ public static boolean pergunta16(){
             + "enviada pelo banco em que possui conta corrente, idêntica à da imagem a seguir: "
             
             + "                                         “CAIXA ECONOMICA\n" +
-"                                                        Evite o cancelamento\n" +
-"                                                       da sua conta e multa de\n" +
-"                                                         198,12 acesse:http://\n" +
-"                                                      gg.gg/NOVA_ADESAO-\n" +
+"                                                      Evite o cancelamento\n" +
+"                                                    da sua conta e multa de\n" +
+"                                                      198,12 acesse:http://\n" +
+"                                                       gg.gg/NOVA_ADESAO-\n" +
 "                                                     CAIXA e regularize seus\n" +
 "                                                                     dados.”"
             + "Acreditando que se tratava de uma mensagem enviada de fato pelo banco em que possui "
