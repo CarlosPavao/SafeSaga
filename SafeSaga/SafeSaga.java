@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 /*
  Projeto Integrador: Desenvolvimento de lógica
-
  */
 
 /**
@@ -10,6 +9,8 @@ import java.util.Scanner;
  * Patricia Ferreira de Sousa • Renan Ferreira Novaes • Rodrigo Dias • Vinicius
  * Da Silva Alves
  */
+public class SafeSaga{
+
   static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
@@ -257,12 +258,43 @@ import java.util.Scanner;
               +" O hacker pensou e teve dó de você e decidiu propor um desafio"
               + " para liberar o seu computador. ");
   }
+  public static int pergunta1() { 
+    Scanner entrada = new Scanner (System.in);
+    
+    System.out.println("Quais dessas alternativas sãos os princípios básicos da Segurança da informação:");
+    
+        System.out.println("1 - Confidencialidade; integridade; disponibilidade; autenticidade ");
+        System.out.println("2 - Confidencialidade; não repúdio; disponibilidade; autenticidade");
+        System.out.println("3 - Confidencialidade; disponibilidade; autenticidade");
+        System.out.println("4 - Integridade; disponibilidade; autenticidade");
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+                System.out.println("Respotas correta!");
+                break;
+            case 2:
+                System.out.println("Você errou");
+                break;
+            case 3:
+                System.out.println("Você errou");
+                break;
+            case 4:
+                System.out.println("Você errou");
+                break;
+               }
+        return opcao;
+  }
+    
+
   
           
   public static void main(String[] args) {
 
     Scanner entrada = new Scanner(System.in);
-
+    int vida =100;
+    int perda=25;
     int[] habilidade = new int[5];
     int retornar=0;
     int confirma = 0;
@@ -356,7 +388,17 @@ import java.util.Scanner;
               
           }
           decisao = inicioQuiz();
+          if(decisao == 1){
+            pergunta1();
+              if(pergunta1() != 1){
+                vida = vida-perda;
+              }
+              pergunta1();
+              if (pergunta1() != 3){
+                vida = vida-perda;
+              }
 
+          }
 
           break;
         case 5:
