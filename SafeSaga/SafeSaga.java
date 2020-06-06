@@ -147,7 +147,7 @@ import java.util.List;
               + " algumas bebidas você vai para o banheiro e lá você encontra um"
               + " CD em uma capa com a etiqueta “presente de grego”. E você pensa... ");
       System.out.println();
-      System.out.println(" Você pegar ou não o CD? ");
+      System.out.println(" Você pega ou não o CD? ");
       System.out.println("1-) Você pega o CD.");
       System.out.println("2-) Você não pega o CD. ");
           Scanner entrada = new Scanner (System.in);
