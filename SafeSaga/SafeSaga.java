@@ -1091,7 +1091,7 @@ public class SafeSaga{
         case 6:
 
       }
-    }while(decisao != 0 && vida == 0 ); 
+    }while(decisao != 0 && vida >= 0 ); 
     System.out.println("Fim de jogo!"
             + " Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso");
   }  
