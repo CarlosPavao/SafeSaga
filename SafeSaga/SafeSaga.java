@@ -258,8 +258,10 @@ public class SafeSaga{
               +" O hacker pensou e teve dó de você e decidiu propor um desafio"
               + " para liberar o seu computador. ");
   }
+  
   public static boolean pergunta1(){ 
     Scanner entrada = new Scanner (System.in);
+    
     boolean acertou = false;
     
         List alternativas = new ArrayList();
@@ -270,8 +272,12 @@ public class SafeSaga{
         alternativas.add("Integridade; disponibilidade; autenticidade"); 
         
         Collections.shuffle(alternativas);
+        do{
+        System.out.println();
         
     System.out.println("Quais dessas alternativas sãos os princípios básicos da Segurança da informação:");
+    
+      System.out.println();
     
         System.out.println("1 -" + alternativas.get(0));
         System.out.println("2 -" + alternativas.get(1));
@@ -314,8 +320,11 @@ public class SafeSaga{
          }
                 break;
                }
+         }while(!acertou);
+         
         return acertou;
   }
+    
   public static boolean pergunta2(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -328,6 +337,10 @@ public class SafeSaga{
         alternativas.add("integridade"); 
         
         Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
         
     System.out.println("Para que você possa ter alguma chance, vai uma questão fácil"
             + " para você responder. Qual o princípio básico de Segurança\n"
@@ -345,7 +358,7 @@ public class SafeSaga{
          
         switch (opcao){
             case 1:
-         if(alternativas.get(0).equals("autenticidade")){
+         if(alternativas.get(0).equals("confidencialidade")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -353,7 +366,7 @@ public class SafeSaga{
           }
                 break;
             case 2:
-         if(alternativas.get(1).equals("autenticidade")){
+         if(alternativas.get(1).equals("confidencialidade")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -361,7 +374,7 @@ public class SafeSaga{
          }
                 break;
             case 3:
-         if(alternativas.get(2).equals("autenticidade")){
+         if(alternativas.get(2).equals("confidencialidade")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -369,18 +382,22 @@ public class SafeSaga{
          }
                 break;
             case 4:
-         if(alternativas.get(3).equals("autenticidade")){
+         if(alternativas.get(3).equals("confidencialidade")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
          System.out.println("Resposta incorreta");
          }
                 break;
-               }
+        }
+        }while(!acertou);
+        
         return acertou;
   }
+  
   public static boolean pergunta3(){ 
     Scanner entrada = new Scanner (System.in);
+    
     boolean acertou = false;
     
         List alternativas = new ArrayList();
@@ -392,6 +409,9 @@ public class SafeSaga{
         alternativas.add("Prover a informação no momento em que for requerida por quem é de direito."); 
         
         Collections.shuffle(alternativas);
+        
+        do{
+        System.out.println();
         
     System.out.println("Qual das opções abaixo, melhor define Confidencialidade?");
     
@@ -407,7 +427,7 @@ public class SafeSaga{
          
         switch (opcao){
             case 1:
-         if(alternativas.get(0).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(0).equals("Proteção da informação contra reprodução não autorizada.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -415,7 +435,7 @@ public class SafeSaga{
           }
                 break;
             case 2:
-         if(alternativas.get(1).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(1).equals("Proteção da informação contra reprodução não autorizada.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -423,7 +443,7 @@ public class SafeSaga{
          }
                 break;
             case 3:
-         if(alternativas.get(2).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(2).equals("Proteção da informação contra reprodução não autorizada.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -431,7 +451,7 @@ public class SafeSaga{
          }
                 break;
             case 4:
-         if(alternativas.get(3).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(3).equals("Proteção da informação contra reprodução não autorizada.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -439,28 +459,38 @@ public class SafeSaga{
          }
                 break;
             case 5:
-         if(alternativas.get(3).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(3).equals("Proteção da informação contra reprodução não autorizada.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
          System.out.println("Resposta incorreta");
          }
-                break;
+                
                }
+        
+        }while(!acertou);
+        
+        
         return acertou;
   }
+    
   public static boolean pergunta4(){ 
     Scanner entrada = new Scanner (System.in);
+    
     boolean acertou = false;
     
         List alternativas = new ArrayList();
         
         alternativas.add("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo."); //resposta correta
         alternativas.add("Proteção da informação contra reprodução não autorizada."); 
+        alternativas.add("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos."); 
         alternativas.add("Característica relacionada ao fornecimento de informações apropriadas no momento certo por sistemas ou processos para a tomada de decisões dos gestores."); 
-        alternativas.add("Relevância da informação e pertinência aos processos de negócio bem como a sua disponibilidade em prazo apropriado, de forma correta, precisa, consistente e em formato adequado para utilização."); 
         
         Collections.shuffle(alternativas);
+        
+    do{
+        
+        System.out.println();
         
     System.out.println("Mais uma questão para te dar chance de não perder seus preciosos dados. Qual das opções abaixo, melhor define Integridade?");
         
@@ -475,7 +505,7 @@ public class SafeSaga{
          
         switch (opcao){
             case 1:
-         if(alternativas.get(0).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(0).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -483,7 +513,7 @@ public class SafeSaga{
           }
                 break;
             case 2:
-         if(alternativas.get(1).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(1).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -491,7 +521,7 @@ public class SafeSaga{
          }
                 break;
             case 3:
-         if(alternativas.get(2).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(2).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -499,16 +529,21 @@ public class SafeSaga{
          }
                 break;
             case 4:
-         if(alternativas.get(3).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         if(alternativas.get(3).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
          System.out.println("Resposta incorreta");
          }
                 break;
-               }
+        }
+        
+     }while(!acertou);
+        
+        
         return acertou;
   }
+  
   public static boolean pergunta5(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -523,13 +558,17 @@ public class SafeSaga{
         
         Collections.shuffle(alternativas);
         
-    System.out.println("Vamos ver se você chegou a, pelo menos fazer alguma pesquisa\n"
+        do{
+        
+        System.out.println();
+        
+        System.out.println("Vamos ver se você chegou a, pelo menos fazer alguma pesquisa\n"
             + " na internet antes de responder essa questão. Considerando os requisitos\n"
             + " ou princípios básicos de segurança, assinale a alternativa que melhor \n"
             + "descreve o requisito de Autorização.");
     
         System.out.println();
-    
+        
         System.out.println("1 -" + alternativas.get(0));
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
@@ -540,7 +579,7 @@ public class SafeSaga{
          
         switch (opcao){
             case 1:
-         if(alternativas.get(0).equals("Protege as informações contra alterações não autorizadas.")){
+         if(alternativas.get(0).equals("Determina as ações que uma entidade pode executar.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -548,7 +587,7 @@ public class SafeSaga{
           }
                 break;
             case 2:
-         if(alternativas.get(1).equals("Protege as informações contra alterações não autorizadas.")){
+         if(alternativas.get(1).equals("Determina as ações que uma entidade pode executar.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -556,7 +595,7 @@ public class SafeSaga{
          }
                 break;
             case 3:
-         if(alternativas.get(2).equals("Protege as informações contra alterações não autorizadas.")){
+         if(alternativas.get(2).equals("Determina as ações que uma entidade pode executar.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
@@ -564,23 +603,28 @@ public class SafeSaga{
          }
                 break;
             case 4:
-         if(alternativas.get(3).equals("Protege as informações contra alterações não autorizadas.")){
+         if(alternativas.get(3).equals("Determina as ações que uma entidade pode executar.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
          System.out.println("Resposta incorreta");
          }
             case 5:
-         if(alternativas.get(3).equals("Protege as informações contra alterações não autorizadas.")){
+         if(alternativas.get(3).equals("Determina as ações que uma entidade pode executar.")){
          System.out.println("Resposta correta");
          acertou=true;
          } else {
          System.out.println("Resposta incorreta");
          }
                 break;
-               }
+        
+        }
+          }while(!acertou);
+        
+        
         return acertou;
   }
+  
   public static boolean pergunta6(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -593,6 +637,10 @@ public class SafeSaga{
         alternativas.add("Geração automática de login para acesso"); 
         
         Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
         
     System.out.println("Na Internet, um usuário pode se apossar indevidamente do\n"
             + " login e da senha de outra pessoa para acessar o sistema em seu lugar.\n"
@@ -642,8 +690,12 @@ public class SafeSaga{
          }
                 break;
                }
+        
+        }while(!acertou);
+        
         return acertou;
   }
+  
   public static boolean pergunta7(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -654,6 +706,10 @@ public class SafeSaga{
         alternativas.add("Errado"); 
         
         Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
         
     System.out.println("Estou com tanta pena de você que vou entrar uma questão \n"
             + "muito fácil. A respeito da segurança da informação, julgue os itens\n"
@@ -684,9 +740,13 @@ public class SafeSaga{
          System.out.println("Resposta incorreta");
          }
                 break;
-        }            
+        }  
+        
+        }while(!acertou);
+        
         return acertou;
   }
+  
   public static boolean pergunta8(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -709,6 +769,10 @@ public class SafeSaga{
                 + "computador, não sendo necessária a utilização de antivírus."); 
         
         Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
         
     System.out.println("Vírus é um programa ou parte de um programa de computador,\n"
             + " normalmente malicioso, que se propaga inserindo cópias de si mesmo.\n"
@@ -785,8 +849,11 @@ public class SafeSaga{
          }
                 break;
                }
+        }while(!acertou);
+        
         return acertou;
   }
+  
   public static boolean pergunta9(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -800,6 +867,10 @@ public class SafeSaga{
         alternativas.add("Engenharia reversa.");
         
         Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
         
     System.out.println("O conjunto de procedimentos e ações que são utilizados para\n"
             + " adquirir informações de uma organização ou de uma pessoa por meio de\n"
@@ -857,8 +928,12 @@ public class SafeSaga{
          }
                 break;
                }
+        }while(!acertou);
+        
+        
         return acertou;
   }
+  
   public static boolean pergunta10(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
@@ -869,6 +944,10 @@ public class SafeSaga{
         alternativas.add("Errado"); 
         
         Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
         
     System.out.println("As tentativas de engenharia social podem ser evitadas por meio de\n"
             + " medidas simples, como, por exemplo, não fornecer quaisquer informações \n"
@@ -899,8 +978,11 @@ public class SafeSaga{
          }
                 break;
         }
+        
+        }while(!acertou);
+        
         return acertou;
-  }
+  }    
  
     
 
@@ -1007,77 +1089,34 @@ public class SafeSaga{
           
           if(decisao == 1){
             pergunta1();
-              if(pergunta1() ==  true){
+            }
+            if(pergunta1() == true){
+                pergunta2();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta2();
-              if(pergunta2() ==  true){
+            if(pergunta2() == true){
+                pergunta3();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta3();
-              if(pergunta3() ==  true){
+            if(pergunta3() == true){
+                pergunta4();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta4();
-              if(pergunta4() ==  true){
+            if(pergunta4() == true){
+                pergunta5();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta5();
-              if(pergunta5() ==  true){
+            if(pergunta5() == true){
+                pergunta6();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta6();
-              if(pergunta6() ==  true){
+            if(pergunta6() == true){
+                pergunta7();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta7();
-              if(pergunta7() ==  true){
+            if(pergunta8() == true){
+                pergunta9();
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta8();
-              if(pergunta8() ==  true){
+            if(pergunta10() == true){
+                System.out.println("Temos que incluir para perguntas!");
                }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta9();
-              if(pergunta9() ==  true){
-               }
-              else {
-              vida = vida-perda;
-              }
-            
-            pergunta10();
-              if(pergunta10() ==  true){
-               }
-              else {
-              vida = vida-perda;
-              }
            
 
-          }
+          
 
           break;
         case 5:
