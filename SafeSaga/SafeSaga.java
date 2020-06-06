@@ -784,7 +784,7 @@ import java.util.List;
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-        System.out.println("5 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
          
@@ -1109,9 +1109,6 @@ import java.util.List;
                }
             if(pergunta10() == true){
                }
-           
-
-          
 
           break;
         case 5:
@@ -1125,7 +1122,7 @@ import java.util.List;
         case 6:
 
       }
-    }while(decisao != 0 && vida > 0 ); 
+    }while(decisao != 0 && vida > 0 && pergunta10() == true); 
     System.out.println("Fim de jogo!"
             + " Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso");
   }  
