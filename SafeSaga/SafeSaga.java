@@ -12,7 +12,7 @@ import java.util.List;
  * Patricia Ferreira de Sousa • Renan Ferreira Novaes • Rodrigo Dias • Vinicius
  * Da Silva Alves
  */
-static int menu() {
+  static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
     System.out.println("                  |       1 - Jogar       |");
@@ -563,10 +563,9 @@ static int menu() {
         
         System.out.println();
         
-        System.out.println("Vamos ver se você chegou a, pelo menos fazer alguma pesquisa\n"
-            + " na internet antes de responder essa questão. Considerando os requisitos\n"
-            + " ou princípios básicos de segurança, assinale a alternativa que melhor \n"
-            + "descreve o requisito de Autorização.");
+        System.out.println("Vamos ver se você chegou a, pelo menos fazer alguma pesquisa na internet\n"
+            + " antes de responder essa questão. Considerando os requisitos ou princípios básicos de \n"
+            + "segurança, assinale a alternativa que melhor descreve o requisito de Autorização.");
     
         System.out.println();
         
@@ -574,7 +573,7 @@ static int menu() {
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-        System.out.println("5 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
          
@@ -884,7 +883,7 @@ static int menu() {
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-        System.out.println("5 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
          
@@ -1091,28 +1090,24 @@ static int menu() {
           if(decisao == 1){
           } 
             if(pergunta1() == true){
-                pergunta2();
-               }
+            }
             if(pergunta2() == true){
-                pergunta3();
                }
             if(pergunta3() == true){
-                pergunta4();
                }
             if(pergunta4() == true){
-                pergunta5();
                }
             if(pergunta5() == true){
-                pergunta6();
                }
             if(pergunta6() == true){
-                pergunta7();
+               }
+            if(pergunta7() == true){
                }
             if(pergunta8() == true){
-                pergunta9();
+               }
+            if(pergunta9() == true){
                }
             if(pergunta10() == true){
-                System.out.println("Temos que incluir para perguntas!");
                }
            
 
