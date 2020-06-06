@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
+import java.util.List;
 
 /*
  Projeto Integrador: Desenvolvimento de lógica
