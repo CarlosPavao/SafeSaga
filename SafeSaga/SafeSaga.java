@@ -983,11 +983,512 @@ import java.util.List;
         
         return acertou;
   }    
- 
-    
 
+ public static boolean pergunta11(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Um dispositivo constituído pela combinação de software e hardware, "
+                + "utilizado para dividir e controlar o acesso entre redes de computadores."); 
+        alternativas.add("Um dos métodos mais utilizado na internet para compartilhamento "
+                + "de informações e troca de mensagens instantâneas com seus amigos e familiares."); 
+        alternativas.add("Um programa ou parte de um programa malicioso projetado para explorar "
+                + "uma vulnerabilidade existente em um software de computador."); 
+        alternativas.add("O método de ataque onde uma pessoa faz uso da persuasão, muitas vezes"//resposta correta
+                + " abusando da ingenuidade ou confiança do usuário, para obter informações que podem "
+                + "ser utilizadas para ter acesso não autorizado a computadores ou informações.");
+ 
+        
+        Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
+        
+    System.out.println("Na informática o termo “Engenharia Social” em termos de segurança, é considerado:");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("O método de ataque onde uma pessoa faz uso da persuasão, "
+                 + "muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informações "
+                 + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("O método de ataque onde uma pessoa faz uso da persuasão, "
+                 + "muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informações "
+                 + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("O método de ataque onde uma pessoa faz uso da persuasão, "
+                 + "muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informações "
+                 + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("O método de ataque onde uma pessoa faz uso da persuasão, "
+                 + "muitas vezes abusando da ingenuidade ou confiança do usuário, para obter informações "
+                 + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        }while(!acertou);
+        
+        
+        return acertou;
+  }
+    
+public static boolean pergunta12(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("phishing."); //resposta correta
+        alternativas.add("keylogger."); 
+        alternativas.add("spoofing."); 
+        alternativas.add("trojans."); 
+        
+        Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
+        
+    System.out.println("A técnica para obtenção de informação que consiste "
+            + "em tentativas por meio da suplantação de identidade pessoalmente "
+            + "identificável, usada por criminosos em contextos informáticos (engenharia social), "
+            + "é denominada de: ");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        
+        }while(!acertou);
+        
+        return acertou;
+  }
   
-          
+  public static boolean pergunta13(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("O phishing acontece exclusivamente no navegador de internet Mozilla Firefox.");
+        alternativas.add("O phishing é uma técnica que se dá exclusivamente pela execução de um arquivo "
+                + "armazenado em um pen drive."); 
+        alternativas.add("O phishing é uma vulnerabilidade do sistema operacional Windows 10."); 
+        alternativas.add("O golpe de phishing consiste em enviar aos usuários uma mensagem legítima,"
+                + " que é interceptada durante a transmissão, a fim de identificar falhas de segurança e resolvê-las."); 
+        alternativas.add("O phishing consiste em enviar aos usuários uma mensagem ilegítima que aparenta " //correta
+                + "pertencer a uma instituição conhecida, como um banco ou órgãos do governo, com links para "
+                + "páginas falsas que pedem nossos dados (CPF, senhas, etc).");
+        
+        Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
+        
+    System.out.println("O phishing é um golpe muito utilizado para obter dados de usuários desavisados. "
+            + "Em relação ao Phising, escolha a alternativa correta: ");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("O phishing consiste em enviar aos usuários uma mensagem ilegítima que aparenta "
+                + "pertencer a uma instituição conhecida, como um banco ou órgãos do governo, com links para "
+                + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("O phishing consiste em enviar aos usuários uma mensagem ilegítima que aparenta "
+                + "pertencer a uma instituição conhecida, como um banco ou órgãos do governo, com links para "
+                + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("O phishing consiste em enviar aos usuários uma mensagem ilegítima que aparenta "
+                + "pertencer a uma instituição conhecida, como um banco ou órgãos do governo, com links para "
+                + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("O phishing consiste em enviar aos usuários uma mensagem ilegítima que aparenta "
+                + "pertencer a uma instituição conhecida, como um banco ou órgãos do governo, com links para "
+                + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        
+        }while(!acertou);
+        
+        return acertou;
+  } 
+
+public static boolean pergunta14(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Port scanner"); 
+        alternativas.add("Cavalo de troia"); 
+        alternativas.add("Spyware");
+        alternativas.add("Técnica de entrevista");
+        alternativas.add("Engenharia social"); //resposta correta
+        
+        Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
+        
+    System.out.println("Analise o diálogo apresentado a seguir:\n" +
+"—Sr. José, bom dia: aqui fala o suporte técnico do seu provedor de internet. O Sr. está feliz com "
+            + "nosso atendimento?\n" +
+"—Sim, bastante\n" +
+"—Sr. José constamos uma ligeira redução da velocidade da sua conexão e por isso gostaríamos"
+            + " de confirmar alguns dados para poder estar melhorando o serviço que lhe prestamos. É possível?\n" +
+"—Pois não!\n" +
+"—O seu endereço é na rua Bastião, 37?\n" +
+"—Sim\n" +
+"—O seu e-mail -e jose.arrose@empresa.com.br?\n" +
+"—Sim\n" +
+"—Muito obrigado, Sr José seus dados foram confirmados e podemos continuar nossa entrevista. "
+            + "O seu histórico de cliente bom pagador gerou um benefício. A sua velocidade de conexão "
+            + "será aumentada sem qualquer acréscimo na sua mensalidade. Bons clientes, melhores "
+            + "serviços. O senhor aceita esse prêmio por bom relacionamento?\n" +
+"—Sim\n" +
+"—Sr. Jose, podemos fazer isso imediatamente, nossos recursos de acesso remoto incorporaram"
+            + " novas funcionalidade que permite que eu mesmo, com um simples comando do meu computador,"
+            + " modifique a configuração do seu modem e troque essa velocidade. O senhor autoriza essa"
+            + " manobra? São 10 M em lugar dos seus 2M atuais.\n" +
+"—Sim\n" +
+"—O senhor, então, pode ditar sua senha de acesso por favor?\n" +
+"—4 5 2 8 4 7 9 3\n" +
+"—Muito obrigado, Sr. José. Aguarde uns 30 minutos e verifique como estará mais rápido a sua navegação. "
+            + "O seu provedor agradece."
+            + "Esse diálogo caracteriza um ataque à segurança da informação conhecido por: ");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+            case 5:
+         if(alternativas.get(3).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        }while(!acertou);
+        
+        
+        return acertou;
+  } 
+
+public static boolean pergunta15(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Boato ( Hoax )"); 
+        alternativas.add("Pescaria ( Phishing )"); //resposta correta
+        alternativas.add("Furto de identidade ( Identity theft )");
+        alternativas.add("Fraude de antecipação de recursos ( Advance fee fraud )");
+
+        
+        Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
+        
+    System.out.println("Com o aumento do uso da internet cada vez mais se deve estar atento à origem "
+            + "dos correios eletrônicos ( emails ) que são recebidos. Atualmente, um dos golpes mais "
+            + "comuns é aquele em que o golpista tenta se passar pela comunicação oficial de uma "
+            + "instituição conhecida, como um banco, uma empresa ou um site popular, visando obter "
+            + "dados pessoais e financeiros do usuário. O nome dado a esse tipo de golpe é:");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Pescaria ( Phishing )")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Pescaria ( Phishing )")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Pescaria ( Phishing )")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Pescaria ( Phishing )")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+
+                break;
+               }
+        }while(!acertou);
+        
+        
+        return acertou;
+    } 
+
+public static boolean pergunta16(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Ransomware"); 
+        alternativas.add("Phishing"); //resposta correta
+        alternativas.add("Botnet");
+        alternativas.add("Keylogger");
+        alternativas.add("Screenlogger");
+        
+        Collections.shuffle(alternativas);
+        
+        do{
+        
+        System.out.println();
+        
+    System.out.println("Larissa recebeu em seu smartphone uma mensagem de texto supostamente "
+            + "enviada pelo banco em que possui conta corrente, idêntica à da imagem a seguir: "
+            
+            + "                                         “CAIXA ECONOMICA\n" +
+"                                                        Evite o cancelamento\n" +
+"                                                       da sua conta e multa de\n" +
+"                                                         198,12 acesse:http://\n" +
+"                                                      gg.gg/NOVA_ADESAO-\n" +
+"                                                     CAIXA e regularize seus\n" +
+"                                                                     dados.”"
+            + "Acreditando que se tratava de uma mensagem enviada de fato pelo banco em que possui "
+            + "conta corrente, imediatamente clicou no link e começou a preencher os dados que estavam"
+            + "sendo solicitados, como: agência, conta, senha e demais dados confidenciais. No dia seguinte, "
+            + "ao conferir o saldo de sua conta corrente, Larissa percebeu que o saldo estava negativo. "
+            + "No contexto de Segurança da Informação, assinale a alternativa que represente o tipo de "
+            + "ameaça de que Larissa foi vítima.");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+            case 5:
+         if(alternativas.get(3).equals("Phishing")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        }while(!acertou);
+        
+        
+        return acertou;
+  } 
+
   public static void main(String[] args) {
 
     Scanner entrada = new Scanner(System.in);
