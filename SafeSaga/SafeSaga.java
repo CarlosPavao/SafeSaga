@@ -258,34 +258,650 @@ public class SafeSaga{
               +" O hacker pensou e teve dó de você e decidiu propor um desafio"
               + " para liberar o seu computador. ");
   }
-  public static int pergunta1() { 
+  public static boolean pergunta1(){ 
     Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
     
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Confidencialidade; integridade; disponibilidade; autenticidade"); //resposta correta
+        alternativas.add("Confidencialidade; não repúdio; disponibilidade; autenticidade"); 
+        alternativas.add("Confidencialidade; disponibilidade; autenticidade"); 
+        alternativas.add("Integridade; disponibilidade; autenticidade"); 
+        
+        Collections.shuffle(alternativas);
+        
     System.out.println("Quais dessas alternativas sãos os princípios básicos da Segurança da informação:");
     
-        System.out.println("1 - Confidencialidade; integridade; disponibilidade; autenticidade ");
-        System.out.println("2 - Confidencialidade; não repúdio; disponibilidade; autenticidade");
-        System.out.println("3 - Confidencialidade; disponibilidade; autenticidade");
-        System.out.println("4 - Integridade; disponibilidade; autenticidade");
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
         
             int opcao = entrada.nextInt();
          
         switch (opcao){
             case 1:
-                System.out.println("Respotas correta!");
+         if(alternativas.get(0).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
                 break;
             case 2:
-                System.out.println("Você errou");
+         if(alternativas.get(1).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
                 break;
             case 3:
-                System.out.println("Você errou");
+         if(alternativas.get(2).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
                 break;
             case 4:
-                System.out.println("Você errou");
+         if(alternativas.get(3).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
                 break;
                }
-        return opcao;
+        return acertou;
   }
+  public static boolean pergunta2(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("disponibilidade"); //resposta correta
+        alternativas.add("autenticidade"); 
+        alternativas.add("confidencialidade"); 
+        alternativas.add("integridade"); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Para que você possa ter alguma chance, vai uma questão fácil"
+            + " para você responder. Qual o princípio básico de Segurança\n"
+            + " da informação que garante o sigilo de uma informação."
+            + " Para garantir, utilizamos algum processo de criptografia de informações.");
+            
+            System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("autenticidade")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta3(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos."); //resposta correta
+        alternativas.add("Proteção da informação contra reprodução não autorizada."); 
+        alternativas.add("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo."); 
+        alternativas.add("Qualidade ou estado legal; conformidade com a lei; legitimidade."); 
+        alternativas.add("Prover a informação no momento em que for requerida por quem é de direito."); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Qual das opções abaixo, melhor define Confidencialidade?");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(4));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 5:
+         if(alternativas.get(3).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta4(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo."); //resposta correta
+        alternativas.add("Proteção da informação contra reprodução não autorizada."); 
+        alternativas.add("Característica relacionada ao fornecimento de informações apropriadas no momento certo por sistemas ou processos para a tomada de decisões dos gestores."); 
+        alternativas.add("Relevância da informação e pertinência aos processos de negócio bem como a sua disponibilidade em prazo apropriado, de forma correta, precisa, consistente e em formato adequado para utilização."); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Mais uma questão para te dar chance de não perder seus preciosos dados. Qual das opções abaixo, melhor define Integridade?");
+        
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Certeza absoluta de que uma informação provém das fontes anunciadas e não foi modificada ao longo do processo.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta5(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Verifica se uma entidade é realmente o que diz ser."); //resposta correta
+        alternativas.add("Protege as informações contra alterações não autorizadas."); 
+        alternativas.add("Evita que uma entidade negue que foi ela quem executou determinada ação."); 
+        alternativas.add("Permite que uma entidade se identifique."); 
+        alternativas.add("Determina as ações que uma entidade pode executar."); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Vamos ver se você chegou a, pelo menos fazer alguma pesquisa\n"
+            + " na internet antes de responder essa questão. Considerando os requisitos\n"
+            + " ou princípios básicos de segurança, assinale a alternativa que melhor \n"
+            + "descreve o requisito de Autorização.");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Protege as informações contra alterações não autorizadas.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Protege as informações contra alterações não autorizadas.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Protege as informações contra alterações não autorizadas.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Protege as informações contra alterações não autorizadas.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+            case 5:
+         if(alternativas.get(3).equals("Protege as informações contra alterações não autorizadas.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta6(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Biometria"); //resposta correta
+        alternativas.add("Senha com oito caracteres (letras maiúsculas, minúsculas e caracteres especiais)"); 
+        alternativas.add("Captcha"); 
+        alternativas.add("Geração automática de login para acesso"); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Na Internet, um usuário pode se apossar indevidamente do\n"
+            + " login e da senha de outra pessoa para acessar o sistema em seu lugar.\n"
+            + " Assinale a opção que indica uma tecnologia utilizada para impedir esse\n"
+            + " tipo de acesso indevido.");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Biometria")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Biometria")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Biometria")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Biometria")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta7(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Certo"); //resposta correta
+        alternativas.add("Errado"); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Estou com tanta pena de você que vou entrar uma questão \n"
+            + "muito fácil. A respeito da segurança da informação, julgue os itens\n"
+            + " subsequente: A descoberta, por hackers, de senha que contenha números,\n"
+            + " letras minúsculas e maiúsculas e os caracteres #$ é considerada difícil.");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Certo")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Certo")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+        }            
+        return acertou;
+  }
+  public static boolean pergunta8(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Para que se torne ativo e dê continuidade ao processo de \n"
+                + "infecção, o vírus depende da execução do programa ou arquivo \n"
+                + "hospedeiro, ou seja, para que o computador seja infectado, é \n"
+                + "preciso que um programa já infectado seja executado. Pen-drives \n"
+                + "e e-mails são meios de propagação de vírus."); //resposta correta
+        alternativas.add("O vírus de computador consegue viver sozinho, não sendo \n"
+                + "necessário nenhum programa hospedeiro."); 
+        alternativas.add("Para que um vírus comece a atuar no computador da vítima,\n"
+                + " não é necessário que seja executado."); 
+        alternativas.add("Vírus de computador nunca utilizam arquivos executáveis \n"
+                + "como hospedeiro, utilizam-se somente de arquivos no formato docx."); 
+        
+        alternativas.add("O sistema operacional Windows 10 é imune a vírus de \n"
+                + "computador, não sendo necessária a utilização de antivírus."); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("Vírus é um programa ou parte de um programa de computador,\n"
+            + " normalmente malicioso, que se propaga inserindo cópias de si mesmo.\n"
+            + " Sobre vírus, assinale a alternativa correta.");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Para que se torne ativo e dê continuidade ao processo de \n"
+                + "infecção, o vírus depende da execução do programa ou arquivo \n"
+                + "hospedeiro, ou seja, para que o computador seja infectado, é \n"
+                + "preciso que um programa já infectado seja executado. Pen-drives \n"
+                + "e e-mails são meios de propagação de vírus.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Para que se torne ativo e dê continuidade ao processo de \n"
+                + "infecção, o vírus depende da execução do programa ou arquivo \n"
+                + "hospedeiro, ou seja, para que o computador seja infectado, é \n"
+                + "preciso que um programa já infectado seja executado. Pen-drives \n"
+                + "e e-mails são meios de propagação de vírus.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Para que se torne ativo e dê continuidade ao processo de \n"
+                + "infecção, o vírus depende da execução do programa ou arquivo \n"
+                + "hospedeiro, ou seja, para que o computador seja infectado, é \n"
+                + "preciso que um programa já infectado seja executado. Pen-drives \n"
+                + "e e-mails são meios de propagação de vírus.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Para que se torne ativo e dê continuidade ao processo de \n"
+                + "infecção, o vírus depende da execução do programa ou arquivo \n"
+                + "hospedeiro, ou seja, para que o computador seja infectado, é \n"
+                + "preciso que um programa já infectado seja executado. Pen-drives \n"
+                + "e e-mails são meios de propagação de vírus.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+            case 5:
+         if(alternativas.get(3).equals("Para que se torne ativo e dê continuidade ao processo de \n"
+                + "infecção, o vírus depende da execução do programa ou arquivo \n"
+                + "hospedeiro, ou seja, para que o computador seja infectado, é \n"
+                + "preciso que um programa já infectado seja executado. Pen-drives \n"
+                + "e e-mails são meios de propagação de vírus.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta9(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Requisitos informacionais de segurança."); 
+        alternativas.add("Vulnerabilidade de ativos informacionais."); 
+        alternativas.add("Engenharia social."); //resposta correta
+        alternativas.add("Ataque do tipo exploitation.");
+        alternativas.add("Engenharia reversa.");
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("O conjunto de procedimentos e ações que são utilizados para\n"
+            + " adquirir informações de uma organização ou de uma pessoa por meio de\n"
+            + " contatos falsos sem o uso da força, do arrombamento físico ou de \n"
+            + "qualquer brutalidade é denominado");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+        System.out.println("3 -" + alternativas.get(2));
+        System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 -" + alternativas.get(3));
+        
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 3:
+         if(alternativas.get(2).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+            case 4:
+         if(alternativas.get(3).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+            case 5:
+         if(alternativas.get(3).equals("Engenharia social.")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+               }
+        return acertou;
+  }
+  public static boolean pergunta10(){ 
+    Scanner entrada = new Scanner (System.in);
+    boolean acertou = false;
+    
+        List alternativas = new ArrayList();
+        
+        alternativas.add("Certo"); //resposta correta
+        alternativas.add("Errado"); 
+        
+        Collections.shuffle(alternativas);
+        
+    System.out.println("As tentativas de engenharia social podem ser evitadas por meio de\n"
+            + " medidas simples, como, por exemplo, não fornecer quaisquer informações \n"
+            + "consideradas como confidenciais a pessoas desconhecidas");
+    
+        System.out.println();
+    
+        System.out.println("1 -" + alternativas.get(0));
+        System.out.println("2 -" + alternativas.get(1));
+                
+            int opcao = entrada.nextInt();
+         
+        switch (opcao){
+            case 1:
+         if(alternativas.get(0).equals("Certo")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+          }
+                break;
+            case 2:
+         if(alternativas.get(1).equals("Certo")){
+         System.out.println("Resposta correta");
+         acertou=true;
+         } else {
+         System.out.println("Resposta incorreta");
+         }
+                break;
+        }
+        return acertou;
+  }
+ 
     
 
   
@@ -388,15 +1004,78 @@ public class SafeSaga{
               
           }
           decisao = inicioQuiz();
+          
           if(decisao == 1){
             pergunta1();
-              if(pergunta1() != 1){
-                vida = vida-perda;
+              if(pergunta1() ==  true){
+               }
+              else {
+              vida = vida-perda;
               }
-              pergunta1();
-              if (pergunta1() != 3){
-                vida = vida-perda;
+            
+            pergunta2();
+              if(pergunta2() ==  true){
+               }
+              else {
+              vida = vida-perda;
               }
+            
+            pergunta3();
+              if(pergunta3() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta4();
+              if(pergunta4() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta5();
+              if(pergunta5() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta6();
+              if(pergunta6() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta7();
+              if(pergunta7() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta8();
+              if(pergunta8() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta9();
+              if(pergunta9() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+            
+            pergunta10();
+              if(pergunta10() ==  true){
+               }
+              else {
+              vida = vida-perda;
+              }
+           
 
           }
 
@@ -412,7 +1091,7 @@ public class SafeSaga{
         case 6:
 
       }
-    }while(decisao != 0 ); 
+    }while(decisao != 0 && vida == 0 ); 
     System.out.println("Fim de jogo!"
             + " Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso");
   }  
