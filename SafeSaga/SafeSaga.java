@@ -1418,13 +1418,8 @@ public static boolean pergunta16(){
     System.out.println("Larissa recebeu em seu smartphone uma mensagem de texto supostamente "
             + "enviada pelo banco em que possui conta corrente, idêntica à da imagem a seguir: "
             
-            + "                                         “CAIXA ECONOMICA\n" +
-"                                                      Evite o cancelamento\n" +
-"                                                    da sua conta e multa de\n" +
-"                                                      198,12 acesse:http://\n" +
-"                                                       gg.gg/NOVA_ADESAO-\n" +
-"                                                     CAIXA e regularize seus\n" +
-"                                                                     dados.”"
+            + "“CAIXA ECONOMICA. Evite o cancelamento da sua conta e multa de 198,12 acesse:http://gg.gg/NOVA_ADESAO-\CAIXA e regularize seus dados.”"
+                       
             + "Acreditando que se tratava de uma mensagem enviada de fato pelo banco em que possui "
             + "conta corrente, imediatamente clicou no link e começou a preencher os dados que estavam"
             + "sendo solicitados, como: agência, conta, senha e demais dados confidenciais. No dia seguinte, "
