@@ -12,7 +12,7 @@ import java.util.List;
  * Patricia Ferreira de Sousa • Renan Ferreira Novaes • Rodrigo Dias • Vinicius
  * Da Silva Alves
  */
-  static int menu() {
+ static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
     System.out.println("                  |       1 - Jogar       |");
@@ -26,7 +26,7 @@ import java.util.List;
 
   }
 
-  public static void habilidade() {
+ public static void habilidade() {
     System.out.println(
         "\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode ser escolhida mais de uma vez.");
     System.out.println();
@@ -37,7 +37,9 @@ import java.util.List;
     System.out.println("5 - Ajuda dos Universitarios - Fica somente Duas alternativas do desafio.");
     System.out.println("6 - Visão além do alcance - revela a resposta correta.");
   }
-  static int inicioJogo(){
+ 
+ static int inicioJogo(){
+     limpaTela();
     System.out.println("Você está no seu ambiente de trabalho, localizado no centro da cidade. "+ 
     "São 17h30 de uma sexta-feira, do dia 07/03/2003 e seu expediente está para terminar. Porém, "+
     "seu chefe te passa uma tarefa de última hora e lhe da a opção de permanecer até mais tarde "+
@@ -53,7 +55,9 @@ import java.util.List;
     System.out.println("Digite a opção desejada");
     return entrada.nextInt();
   }
-  static int primeiraEscolha(){
+ 
+ static int primeiraEscolha(){
+     limpaTela();
     System.out.println("Ao sair tarde do trabalho (Por volta das 22h00), você lembra que precisava "+
             "comprar o CD para o novo jogo que você gostaria de jogar, mas que agora era tarde para encontrar "+
             "uma loja aberta. Coincidentemente, ao andar algumas quadras até a estação do metro, você é  "+
@@ -75,13 +79,17 @@ import java.util.List;
             return entrada.nextInt(); 
               
   }
-  public static void decisao1Escolha1(){
+ 
+ public static void decisao1Escolha1(){
+     limpaTela();
     System.out.println(" Poucos minutos depois você recebe um e-mail. Ansioso para ver o resultado, "+
               "clica no arquivo e é quando você recebe uma mensagem: 'Identificamos que você instalou um programa "+
               "no qual te deixou totalmente vulnerável. Vários dos seus dados foram roubados. Para que eu não libere' " +
               "para o mundo, vamos fazer um jogo");
   }
-  static int inicioQuiz(){
+ 
+ static int inicioQuiz(){
+     limpaTela();
     System.out.println("As regras são simples. Farei uma série de perguntas pra testar seus conhecimentos sobre segurança da informação;"+
     " sendo assim, tome muito cuidado ao dar suas respostas, seus dados dependem disso."+ 
     " Acredito que você não tenha nenhuma habilidade especial para passar pelo meu “Quis da Redenção” isso poderia estragar meus planos"+
@@ -90,9 +98,12 @@ import java.util.List;
     "0-)	Não, quero sair correndo\n");
     Scanner entrada = new Scanner(System.in);
     System.out.println("Digite a opção desejada");
+    
     return entrada.nextInt(); 
   }
-  public static void decisao1Alternatica2(){
+ 
+ public static void decisao1Alternatica2(){
+     limpaTela();
     System.out.println("Ao encerrar o chat, você percebe que sua tela congela e um bloco de notas abre no seu monitor com a seguinte mensagem"+
     " Não precisamos mais do seu e-mail, identificamos que você instalou um programa no qual te deixou totalmente vulnerável. Vários dos seus"+
     " dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo"+
@@ -104,7 +115,9 @@ import java.util.List;
     );
 
   }
-  static int decisao2(){
+ 
+ static int decisao2(){
+     limpaTela();
     System.out.println("Ao sair mais cedo do trabalho, você vai correndo comprar seu lanche no Mc2000. Chegando lá, você vê que a fila enorme "+
     "por conta do horário. Bom, você resolve esperar pacientemente para ser atendido. Neste meio período, você percebe é uma bela garota/garoto "+
     "abordando as pessoas para fazer uma pesquisa e você até que fica empolgado para poder bater um papo com ela/ele. Chegada a sua vez, ela "+ 
@@ -117,20 +130,26 @@ import java.util.List;
       
     return entrada.nextInt();
   }
-  public static void decisao2Escolha1(){
+ 
+ public static void decisao2Escolha1(){
+     limpaTela();
     System.out.println("Ela/Ele agradece muito de passa pela gentileza e diz que irá te mandar uma mensagem de texto para marcar combinar um "+
     "encontro. Você recebe ao final da pesquisa um CD de provedor de internet. Ela/Ele diz que é uma novidade e que você deveria ver como ela "+
     "é super simples e leve de ser usado em qualquer máquina. Você não vê problema algum, afinal, isso tudo estava acontecendo dentro de uma "+
     "grande rede de fast-food.\n ");
     
   }
-  public static void decisao2Escolha2(){
+ 
+ public static void decisao2Escolha2(){
+   limpaTela();
     System.out.println("Ela/Ele fica um pouco chateado/a com sua resposta, mas diz que gostou muito de você e que, e mesmo assim, lhe dará o "+
     "brinde sem preencher os dados e que passará o telefone dela/dele. Ele/ela te entrega um CD de provedor e, junto, um papel com o telefone. "+
     "Você fica muito feliz com a atitude dela/dele e lembra de que de fato queria trocar seu provedor. Você não vê problema algum, afinal, isso "+
     "tudo estava acontecendo dentro de uma grande rede de fast-food.");;
   }
-  public static void decisao2Final(){
+ 
+ public static void decisao2Final(){
+     limpaTela();
     System.out.println("Você finalmente consegue comprar seu combo na lanchonete e vai correndo para casa aproveitar seu computador. Claro que "+
     "você não poderia deixar de instalar o novo CD que você ganhou, porque quando você fosse conversar com ela/ele, teria que ter já algum "+
     "assunto para iniciar.\n"+
@@ -140,7 +159,9 @@ import java.util.List;
     "se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair bem com tudo isso, "+
     "mais forte!!");
   }
-  static int decisao3() {
+ 
+ static int decisao3() {
+     limpaTela();
       System.out.println("Você sai do serviço às 18:00 e vai com seus amigos"
               + " para aquele momento happy hour e decide executar a tarefa dada"
               + " em casa no final de semana, pois ninguém é de ferro. Depois de"
@@ -154,7 +175,9 @@ import java.util.List;
           
     return entrada.nextInt();
      }
-  public static void decisao3Escolha1(){
+ 
+ public static void decisao3Escolha1(){
+     limpaTela();
       System.out.println(" Você pega o CD e nem comenta para seus amigos sobre"
               + " ele. Depois mais algumas bebidas você sente que chegou no seu"
               + " limite e se despede dos parceiros e vai para sua casa, curioso"
@@ -176,7 +199,9 @@ import java.util.List;
               + " como está no período de avaliação. O hacker pensou e decidiu"
               + " propor um desafio para liberar o seu computador.");
   }
-  public static void decisao3Escolha2(){
+ 
+ public static void decisao3Escolha2(){
+     limpaTela();
       System.out.println(" Você decide não pegar o CD, usa o banheiro e retorna"
               + " para as bebidas juntos com os amigos. Logo depois de um tempo"
               + " um de seus amigos vai ao banheiro e encontra o CD leva-o para"
@@ -198,7 +223,9 @@ import java.util.List;
               + " período de avaliação. O hacker pensou e teve dó de você e"
               + " decidiu propor um desafio para liberar o seu computador.");
   }
-  static int decisao4(){
+ 
+ static int decisao4(){
+     limpaTela();
       System.out.println(" Você dispensa o happy hour com os amigos e alega que"
               + " é novo no serviço e precisa mostrar trabalho. E durante o "
               + "caminho você lembra que precisa comprar um jogo para testar "
@@ -212,7 +239,9 @@ import java.util.List;
                 
                 return entrada.nextInt();
   }
-  public static void decisao4Escolha1(){
+ 
+ public static void decisao4Escolha1(){
+     limpaTela();
       System.out.println(" Na loja de games você nota que o preço do jogo"
               + " interessado era muito alto e no momento estava sem dinheiro"
               + " para compra-lo devido sua recente compra do computador."
@@ -235,7 +264,9 @@ import java.util.List;
               + "O hacker pensou e teve dó de você e decidiu propor um desafio "
               + "para liberar o seu computador.");
   }
-  public static void decisao4Escolha2(){
+ 
+ public static void decisao4Escolha2(){
+     limpaTela();
       System.out.println("Você foi direto para a sua casa e decide logo jantar "
               + "para matar a fome que o incomodava. Após a refeição você decide"
               + " ver o conteúdo da mídia no seu PC. De imediato foi executado "
@@ -260,8 +291,9 @@ import java.util.List;
               + " para liberar o seu computador. ");
   }
   
-  public static boolean pergunta1(){ 
-    Scanner entrada = new Scanner (System.in);
+ public static boolean pergunta1(){ 
+    limpaTela();
+     Scanner entrada = new Scanner (System.in);
     
     boolean acertou = false;
     
@@ -286,7 +318,9 @@ import java.util.List;
         System.out.println("4 -" + alternativas.get(3));
         
             int opcao = entrada.nextInt();
-         
+                     
+            limpaTela();
+            
         switch (opcao){
             case 1:
          if(alternativas.get(0).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
@@ -326,7 +360,7 @@ import java.util.List;
         return acertou;
   }
     
-  public static boolean pergunta2(){ 
+ public static boolean pergunta2(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -357,6 +391,8 @@ import java.util.List;
         
             int opcao = entrada.nextInt();
          
+            limpaTela();
+            
         switch (opcao){
             case 1:
          if(alternativas.get(0).equals("confidencialidade")){
@@ -396,7 +432,7 @@ import java.util.List;
         return acertou;
   }
   
-  public static boolean pergunta3(){ 
+ public static boolean pergunta3(){ 
     Scanner entrada = new Scanner (System.in);
     
     boolean acertou = false;
@@ -426,6 +462,8 @@ import java.util.List;
         
             int opcao = entrada.nextInt();
          
+            limpaTela();
+            
         switch (opcao){
             case 1:
          if(alternativas.get(0).equals("Proteção da informação contra reprodução não autorizada.")){
@@ -475,7 +513,7 @@ import java.util.List;
         return acertou;
   }
     
-  public static boolean pergunta4(){ 
+ public static boolean pergunta4(){ 
     Scanner entrada = new Scanner (System.in);
     
     boolean acertou = false;
@@ -504,6 +542,8 @@ import java.util.List;
         
             int opcao = entrada.nextInt();
          
+            limpaTela();
+            
         switch (opcao){
             case 1:
          if(alternativas.get(0).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
@@ -545,7 +585,7 @@ import java.util.List;
         return acertou;
   }
   
-  public static boolean pergunta5(){ 
+ public static boolean pergunta5(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -576,6 +616,8 @@ import java.util.List;
         System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -625,7 +667,7 @@ import java.util.List;
         return acertou;
   }
   
-  public static boolean pergunta6(){ 
+ public static boolean pergunta6(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -655,6 +697,8 @@ import java.util.List;
         System.out.println("4 -" + alternativas.get(3));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -696,7 +740,7 @@ import java.util.List;
         return acertou;
   }
   
-  public static boolean pergunta7(){ 
+ public static boolean pergunta7(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -722,6 +766,8 @@ import java.util.List;
         System.out.println("2 -" + alternativas.get(1));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -747,7 +793,7 @@ import java.util.List;
         return acertou;
   }
   
-  public static boolean pergunta8(){ 
+ public static boolean pergunta8(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -787,6 +833,8 @@ import java.util.List;
         System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -853,8 +901,8 @@ import java.util.List;
         
         return acertou;
   }
-  
-  public static boolean pergunta9(){ 
+ 
+ public static boolean pergunta9(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -886,6 +934,8 @@ import java.util.List;
         System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -934,7 +984,7 @@ import java.util.List;
         return acertou;
   }
   
-  public static boolean pergunta10(){ 
+ public static boolean pergunta10(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -959,6 +1009,8 @@ import java.util.List;
         System.out.println("2 -" + alternativas.get(1));
                 
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -1018,6 +1070,8 @@ import java.util.List;
 
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -1067,7 +1121,7 @@ import java.util.List;
         return acertou;
   }
     
-public static boolean pergunta12(){ 
+ public static boolean pergunta12(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -1098,6 +1152,8 @@ public static boolean pergunta12(){
         
             int opcao = entrada.nextInt();
          
+            limpaTela();
+            
         switch (opcao){
             case 1:
          if(alternativas.get(0).equals("phishing")){
@@ -1138,7 +1194,7 @@ public static boolean pergunta12(){
         return acertou;
   }
   
-  public static boolean pergunta13(){ 
+ public static boolean pergunta13(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -1170,7 +1226,10 @@ public static boolean pergunta12(){
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-            int opcao = entrada.nextInt();
+            
+        int opcao = entrada.nextInt();
+        
+        limpaTela();
          
         switch (opcao){
             case 1:
@@ -1220,7 +1279,7 @@ public static boolean pergunta12(){
         return acertou;
   } 
 
-public static boolean pergunta14(){ 
+ public static boolean pergunta14(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -1274,6 +1333,8 @@ public static boolean pergunta14(){
         System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -1322,7 +1383,7 @@ public static boolean pergunta14(){
         return acertou;
   } 
 
-public static boolean pergunta15(){ 
+ public static boolean pergunta15(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -1353,8 +1414,9 @@ public static boolean pergunta15(){
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
 
+        int opcao = entrada.nextInt();
         
-            int opcao = entrada.nextInt();
+        limpaTela();
          
         switch (opcao){
             case 1:
@@ -1397,7 +1459,7 @@ public static boolean pergunta15(){
         return acertou;
     } 
 
-public static boolean pergunta16(){ 
+ public static boolean pergunta16(){ 
     Scanner entrada = new Scanner (System.in);
     boolean acertou = false;
     
@@ -1417,9 +1479,7 @@ public static boolean pergunta16(){
         
     System.out.println("Larissa recebeu em seu smartphone uma mensagem de texto supostamente "
             + "enviada pelo banco em que possui conta corrente, idêntica à da imagem a seguir: "
-            
-            + "“CAIXA ECONOMICA. Evite o cancelamento da sua conta e multa de 198,12 acesse:http://gg.gg/NOVA_ADESAO-\CAIXA e regularize seus dados.”"
-                       
+            + "CAIXA ECONOMICA. Evite o cancelamento da sua conta e multa de NOVAADESAOCAIXA e regularize seus dados."        
             + "Acreditando que se tratava de uma mensagem enviada de fato pelo banco em que possui "
             + "conta corrente, imediatamente clicou no link e começou a preencher os dados que estavam"
             + "sendo solicitados, como: agência, conta, senha e demais dados confidenciais. No dia seguinte, "
@@ -1436,6 +1496,8 @@ public static boolean pergunta16(){
         System.out.println("5 -" + alternativas.get(4));
         
             int opcao = entrada.nextInt();
+            
+            limpaTela();
          
         switch (opcao){
             case 1:
@@ -1483,8 +1545,15 @@ public static boolean pergunta16(){
         
         return acertou;
   } 
+ 
+ static void limpaTela(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println("\n");
+        }
+        
+    }
 
-  public static void main(String[] args) {
+ public static void main(String[] args) {
 
     Scanner entrada = new Scanner(System.in);
     int vida =100;
@@ -1503,13 +1572,19 @@ public static boolean pergunta16(){
           System.out.println();
           System.out.println("Como vai se chamar seu personagem?");
           String nomePersonagem = entrada.next();
-
+          
+          limpaTela();
+          
           do {
             habilidade();
             for (int i = 0; i < 5; i++) {
               habilidade[i] = entrada.nextInt();
             }
+            
+            limpaTela();
+            
             System.out.println(nomePersonagem+ " Voce escolheu as seguintes habilidades: ");
+            limpaTela();
             for (int i = 0; i < habilidade.length; i++) {
               switch (habilidade[i]) {
                 case 1:
@@ -1605,6 +1680,19 @@ public static boolean pergunta16(){
                }
             if(pergunta10() == true){
                }
+            if(pergunta11() == true){
+               }
+            if(pergunta12() == true){
+               }
+            if(pergunta13() == true){
+               }
+            if(pergunta14() == true){
+               }
+            if(pergunta15() == true){
+               }
+            if(pergunta16() == true){
+                System.out.println("Fim de jogo!");   
+            }
 
           break;
         case 5:
@@ -1618,8 +1706,8 @@ public static boolean pergunta16(){
         case 6:
 
       }
-    }while(decisao != 0 && vida > 0 && pergunta10() == true); 
+    }while(decisao != 0 && vida > 0 && pergunta16() == true); 
     System.out.println("Fim de jogo!"
             + " Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso");
   }  
-}
+ }
