@@ -12,9 +12,7 @@ import java.util.List;
  * Patricia Ferreira de Sousa • Renan Ferreira Novaes • Rodrigo Dias • Vinicius
  * Da Silva Alves
  */
-public class SafeSaga{
-
-  static int menu() {
+static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
     System.out.println("                  |       1 - Jogar       |");
@@ -89,7 +87,7 @@ public class SafeSaga{
     " Acredito que você não tenha nenhuma habilidade especial para passar pelo meu “Quis da Redenção” isso poderia estragar meus planos"+
      " de me divertir com você.\n Você está preparado para começar?\n"+
     "1-)	Sim, vamos lá.\n"+
-    "0-)	Não, quero sair correndo.\n");
+    "0-)	Não, quero sair correndo\n");
     Scanner entrada = new Scanner(System.in);
     System.out.println("Digite a opção desejada");
     return entrada.nextInt(); 
@@ -149,7 +147,7 @@ public class SafeSaga{
               + " algumas bebidas você vai para o banheiro e lá você encontra um"
               + " CD em uma capa com a etiqueta “presente de grego”. E você pensa... ");
       System.out.println();
-      System.out.println(" Você pega ou não o CD? ");
+      System.out.println(" Você pegar ou não o CD? ");
       System.out.println("1-) Você pega o CD.");
       System.out.println("2-) Você não pega o CD. ");
           Scanner entrada = new Scanner (System.in);
@@ -1091,8 +1089,7 @@ public class SafeSaga{
           decisao = inicioQuiz();
           
           if(decisao == 1){
-            pergunta1();
-            }
+          } 
             if(pergunta1() == true){
                 pergunta2();
                }
