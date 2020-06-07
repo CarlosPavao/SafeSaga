@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /*
  Projeto Integrador: Desenvolvimento de lógica
@@ -29,9 +30,6 @@ public class SafeSaga{
   }
 
  public static void habilidade() {
-    System.out.println(
-        "\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode ser escolhida mais de uma vez.");
-    System.out.println();
     System.out.println("1 - Pular - Caso não saiba a resposta pula o desafio do Hacker.");
     System.out.println("2 - Sorte - Jogue dois dados se o resultado for maior que 7 você passa esse desafio.");
     System.out.println("3 - Tente Novamente - você tem a oportunidade de responder novamente caso errou.");
@@ -293,11 +291,11 @@ public class SafeSaga{
               + " para liberar o seu computador. ");
   }
   
-    public static boolean pergunta1(){ 
+    public static int pergunta1(){ 
         limpaTela();
         Scanner entrada = new Scanner (System.in);
         
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -305,6 +303,8 @@ public class SafeSaga{
         alternativas.add("Confidencialidade; não repúdio; disponibilidade; autenticidade"); 
         alternativas.add("Confidencialidade; disponibilidade; autenticidade"); 
         alternativas.add("Integridade; disponibilidade; autenticidade"); 
+        
+        
             
         Collections.shuffle(alternativas);
             
@@ -318,6 +318,7 @@ public class SafeSaga{
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
+        System.out.println("5 - Usar uma habilidade.");
         int opcao = entrada.nextInt();
                         
         limpaTela();
@@ -326,47 +327,53 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
-                } else {
+                    acertou=1;
+                }else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Confidencialidade; integridade; disponibilidade; autenticidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou=0;
                 }
+                break;
+            case 5:
+                acertou =2;
+                
                 break;
         }
                     
         return acertou;
     }
     
-    public static boolean pergunta2(){ 
+    
+
+    public static int pergunta2() {
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -2;
         
         List alternativas = new ArrayList();
             
@@ -390,6 +397,7 @@ public class SafeSaga{
         System.out.println("2 - " + alternativas.get(1));
         System.out.println("3 - " + alternativas.get(2));
         System.out.println("4 - " + alternativas.get(3));
+        System.out.println("5 - Usar uma habilidade");
             
         int opcao = entrada.nextInt();
             
@@ -399,47 +407,51 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("confidencialidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou = 1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("confidencialidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("confidencialidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                     }
                 break;
             case 4:
                 if(alternativas.get(3).equals("confidencialidade")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
-            }
+            case 5:
+                acertou =2;
+                break;
+            
+        }
             return acertou;
     }
     
-    public static boolean pergunta3(){ 
+    public static int pergunta3(){ 
         Scanner entrada = new Scanner (System.in);
         
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -462,7 +474,7 @@ public class SafeSaga{
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-            
+        System.out.println("6 - Usar uma habilidade");
         int opcao = entrada.nextInt();
             
         limpaTela();
@@ -471,55 +483,56 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Proteção da informação contra reprodução não autorizada.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Proteção da informação contra reprodução não autorizada.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou = 1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Proteção da informação contra reprodução não autorizada.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Proteção da informação contra reprodução não autorizada.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false; 
+                    acertou = 0; 
                 }
                 break;
             case 5:
                 if(alternativas.get(3).equals("Proteção da informação contra reprodução não autorizada.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                     } else {
                         System.out.println("Resposta incorreta");
-                        acertou = false;
+                        acertou = 0;
                     }
-                    
+            case 6:
+                acertou = 2;
         }
         return acertou;
     }
     
-    public static boolean pergunta4(){ 
+    public static int pergunta4(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -540,7 +553,7 @@ public class SafeSaga{
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-            
+        System.out.println("5 - Usar uma habilidade");
         int opcao = entrada.nextInt();
             
         limpaTela();
@@ -549,46 +562,49 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Propriedade relacionada à precisão da informação, bem como sua validade de acordo com os padrões e expectativas estabelecidos.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
-                    break;
+                break;
+            case 5:
+                acertou =2;
+                break;
         }
         return acertou;
     }
   
-    public static boolean pergunta5(){ 
+    public static int pergunta5(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -613,7 +629,7 @@ public class SafeSaga{
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-            
+        System.out.println("6 - Usar uma habilidade");
         int opcao = entrada.nextInt();
                 
         limpaTela();
@@ -622,55 +638,57 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Determina as ações que uma entidade pode executar.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Determina as ações que uma entidade pode executar.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Determina as ações que uma entidade pode executar.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Determina as ações que uma entidade pode executar.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 case 5:
                     if(alternativas.get(3).equals("Determina as ações que uma entidade pode executar.")){
                         System.out.println("Resposta correta");
-                        acertou=true;
+                        acertou=1;
                     } else {
                         System.out.println("Resposta incorreta");
-                        acertou = false;
+                        acertou = 0;
                     }
                     break;
-            
-            }
+                case 6:
+                    acertou =2;
+                    break;
+        }
         return acertou;
     }
   
-    public static boolean pergunta6(){ 
+    public static int pergunta6(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -694,7 +712,7 @@ public class SafeSaga{
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-            
+        System.out.println(("5 - Usar uma habilidade"));
         int opcao = entrada.nextInt();
                 
         limpaTela();
@@ -703,46 +721,49 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Biometria")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Biometria")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Biometria")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Biometria")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = false;
+                    acertou = 0;
                 }
+                break;
+            case 5:
+                acertou =2;
                 break;
         }
         return acertou;
     }
   
-    public static boolean pergunta7(){ 
+    public static int pergunta7(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -762,7 +783,7 @@ public class SafeSaga{
         
         System.out.println("1 -" + alternativas.get(0));
         System.out.println("2 -" + alternativas.get(1));
-            
+        System.out.println("3 - Usar uma habilidade");
         int opcao = entrada.nextInt();
                 
         limpaTela();
@@ -771,28 +792,31 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Certo")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Certo")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
+                break;
+            case 3:
+                acertou =2;
                 break;
         }  
         return acertou;
     }      
   
-    public static boolean pergunta8(){ 
+    public static int pergunta8(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -826,7 +850,7 @@ public class SafeSaga{
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-            
+        System.out.println("6 - Usar uma habilidade");    
         int opcao = entrada.nextInt();
                 
         limpaTela();
@@ -840,10 +864,10 @@ public class SafeSaga{
                     + "e e-mails são meios de propagação de vírus.")){
                     
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
@@ -854,10 +878,10 @@ public class SafeSaga{
                     + "e e-mails são meios de propagação de vírus.")){
                     
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 3:
@@ -868,10 +892,10 @@ public class SafeSaga{
                     + "e e-mails são meios de propagação de vírus.")){
                     
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
@@ -882,10 +906,10 @@ public class SafeSaga{
                     + "e e-mails são meios de propagação de vírus.")){
             
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
             case 5:
                 if(alternativas.get(3).equals("Para que se torne ativo e dê continuidade ao processo de \n"
@@ -895,19 +919,22 @@ public class SafeSaga{
                     + "e e-mails são meios de propagação de vírus.")){
             
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
+                break;
+            case 6:
+                acertou=2;
                 break;
         }
         return acertou;
     }
  
-    public static boolean pergunta9(){ 
+    public static int pergunta9(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
         
         List alternativas = new ArrayList();
             
@@ -933,7 +960,7 @@ public class SafeSaga{
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-            
+        System.out.println("6 - Usar uma habilidade");
         int opcao = entrada.nextInt();
                 
         limpaTela();
@@ -942,56 +969,58 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 5:
                 if(alternativas.get(3).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
+                break;
+            case 6:
+                acertou=2;
                 break;
         }
             return acertou;
         }
   
-    public static boolean pergunta10(){ 
+    public static int pergunta10(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
-    
+        int acertou = -1;    
         List alternativas = new ArrayList();
         
         alternativas.add("Certo"); //resposta correta
@@ -1009,7 +1038,7 @@ public class SafeSaga{
     
         System.out.println("1 -" + alternativas.get(0));
         System.out.println("2 -" + alternativas.get(1));
-                
+        System.out.println("3 - Usar uma habilidade");
         int opcao = entrada.nextInt();
             
         limpaTela();
@@ -1018,28 +1047,30 @@ public class SafeSaga{
         case 1:
             if(alternativas.get(0).equals("Certo")){
                 System.out.println("Resposta correta");
-                acertou=true;
+                acertou=1;
             } else {
                 System.out.println("Resposta incorreta");
-                acertou=false;
+                acertou=0;
             }
             break;
         case 2:
             if(alternativas.get(1).equals("Certo")){
                 System.out.println("Resposta correta");
-                acertou=true;
+                acertou=1;
             } else {
                 System.out.println("Resposta incorreta");
-                acertou=false;
+                acertou=0;
             }
+        case 3:
+            acertou=2;
             break;
         }
         return acertou;
     }    
 
-    public static boolean pergunta11(){ 
+    public static int pergunta11(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
     
         List alternativas = new ArrayList();
         
@@ -1066,7 +1097,7 @@ public class SafeSaga{
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-
+        System.out.println("5 - Usar uma habilidade");
         
         int opcao = entrada.nextInt();
             
@@ -1079,9 +1110,10 @@ public class SafeSaga{
                     + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
                 
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
+                    acertou=0;
                 }
                 break;
             case 2:
@@ -1090,10 +1122,10 @@ public class SafeSaga{
                     + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
                 
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                 System.out.println("Resposta incorreta");
-                acertou=false;
+                acertou=0;
                 }
                 break;
             case 3:
@@ -1102,10 +1134,10 @@ public class SafeSaga{
                     + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
          
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
@@ -1114,19 +1146,22 @@ public class SafeSaga{
                     + "que podem ser utilizadas para ter acesso não autorizado a computadores ou informações.")){
                     
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
+                break;
+            case 6:
+                acertou=2;
                 break;
         }
         return acertou;
     }
     
-    public static boolean pergunta12(){ 
+    public static int pergunta12(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = 1;
     
         List alternativas = new ArrayList();
         
@@ -1150,7 +1185,7 @@ public class SafeSaga{
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-        
+        System.out.println("5 - Usar uma habilidade");
         int opcao = entrada.nextInt();
          
         limpaTela();
@@ -1159,46 +1194,49 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("phishing")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("phishing")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("phishing")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("phishing")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
+                break;
+            case 5:
+                acertou=2;
                 break;
         }
         return acertou;
     }
   
-    public static boolean pergunta13(){ 
+    public static int pergunta13(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
     
         List alternativas = new ArrayList();
         
@@ -1226,7 +1264,7 @@ public class SafeSaga{
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-            
+        System.out.println("6 - Usar uma habilidade");    
         int opcao = entrada.nextInt();
         
         limpaTela();
@@ -1238,10 +1276,10 @@ public class SafeSaga{
                     + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
             
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
@@ -1250,10 +1288,10 @@ public class SafeSaga{
                     + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
                 
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 3:
@@ -1262,10 +1300,10 @@ public class SafeSaga{
                     + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
                     
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
@@ -1274,19 +1312,33 @@ public class SafeSaga{
                     + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
                 
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
-               }
+            case 5:
+                if(alternativas.get(4).equals("O phishing consiste em enviar aos usuários uma mensagem ilegítima que aparenta "
+                    + "pertencer a uma instituição conhecida, como um banco ou órgãos do governo, com links para "
+                    + "páginas falsas que pedem nossos dados (CPF, senhas, etc).")){
+            
+                    System.out.println("Resposta correta");
+                    acertou=1;
+                } else {
+                    System.out.println("Resposta incorreta");
+                    acertou=0;
+                }
+                break;
+            case 6:
+                acertou=2;
+        }
         return acertou;
     } 
 
-    public static boolean pergunta14(){ 
+    public static int pergunta14(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
     
         List alternativas = new ArrayList();
         
@@ -1334,7 +1386,7 @@ public class SafeSaga{
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
         System.out.println("5 -" + alternativas.get(4));
-        
+        System.out.println("6 - Usar uma habilidade");    
         int opcao = entrada.nextInt();
             
         limpaTela();
@@ -1343,54 +1395,57 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                 System.out.println("Resposta incorreta");
-                acertou=false;
+                acertou=0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
             case 5:
                 if(alternativas.get(3).equals("Engenharia social.")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
+                break;
+            case 6:
+                acertou=2;
                 break;
         }
         return acertou;
     } 
 
-    public static boolean pergunta15(){ 
+    public static int pergunta15(){ 
         Scanner entrada = new Scanner (System.in);
-        boolean acertou = false;
+        int acertou = -1;
     
         List alternativas = new ArrayList();
         
@@ -1416,7 +1471,7 @@ public class SafeSaga{
         System.out.println("2 -" + alternativas.get(1));
         System.out.println("3 -" + alternativas.get(2));
         System.out.println("4 -" + alternativas.get(3));
-
+        System.out.println("5 - Usar uma habilidade.");
         int opcao = entrada.nextInt();
         
         limpaTela();
@@ -1425,40 +1480,44 @@ public class SafeSaga{
             case 1:
                 if(alternativas.get(0).equals("Pescaria ( Phishing )")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 2:
                 if(alternativas.get(1).equals("Pescaria ( Phishing )")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 3:
                 if(alternativas.get(2).equals("Pescaria ( Phishing )")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
             case 4:
                 if(alternativas.get(3).equals("Pescaria ( Phishing )")){
                     System.out.println("Resposta correta");
-                    acertou=true;
+                    acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou=false;
+                    acertou=0;
                 }
                 break;
-               }
+            case 5:
+                acertou=2;
+                break;
+        }
+            
         return acertou;
     } 
 
@@ -1562,18 +1621,60 @@ public class SafeSaga{
 
         return vida;
     }
+    static int pesquisarHabilidade(int [] vetor) {
+        Scanner entrada = new Scanner(System.in);
+        
+        habilidade();
+        System.out.println("Qual a habilidade deseja ultilizar?");
+        int habilidade = entrada.nextInt();
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == habilidade) {
+                vetor[i]= 0 ;
+                return habilidade;
+
+            } if (vetor[i] != habilidade) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+    static boolean habilidadeSorte(){
+        Random aleatorio = new Random();
+        int face=0;
+        boolean resultado = false;
+        for (int i=0; i<2; i++){
+            
+             face=aleatorio.nextInt(6) + 1;
+        }
+        System.out.println(face);
+        if(face >= 8){
+            System.out.println("Parabens você passou para proxima pergunta");
+            resultado = true;
+        }else{
+            System.out.println("Você acaba de perder uma habilidade assim que gosto. ahahahahaha");
+            resultado = false;
+        }
+        return resultado;
+    } 
+    static int habilidadeTenteNovamente(){
+        int resposta = 2;
+        return resposta;
+    }
+    
 
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
         int vida =100;
         int perda=20;
-        int fimDaLinha=1;
-        int[] habilidade = new int[5];
+        int fimDaLinha = -1;
+        int[] habilidades = new int[5];
         int retornar=0;
         int confirma = 0;
         int decisao=0;
+        int resposta = -2;
         String nomePersonagem;
+        boolean quiz;
         
         do{
         int opcao = menu();
@@ -1588,17 +1689,19 @@ public class SafeSaga{
             limpaTela();
             
             do {
+                System.out.println("\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode"
+                + " ser escolhida mais de uma vez.");  
                 habilidade();
                 for (int i = 0; i < 5; i++) {
-                habilidade[i] = entrada.nextInt();
+                habilidades[i] = entrada.nextInt();
                 }
                 
                 limpaTela();
                 
                 System.out.println(nomePersonagem+ " Voce escolheu as seguintes habilidades: ");
-                limpaTela();
-                for (int i = 0; i < habilidade.length; i++) {
-                switch (habilidade[i]) {
+                
+                for (int i = 0; i < habilidades.length; i++) {
+                switch (habilidades[i]) {
                     case 1:
                     System.out.println("Habilidade[" + (i + 1) + "]: Pular");
                     break;
@@ -1622,7 +1725,7 @@ public class SafeSaga{
                 System.out.println("Você confirma as habilidade:\n1-Sim\n2-Não");
                 confirma = entrada.nextInt();
             } while (confirma != 1);
-            
+            limpaTela();
             int escolhas = inicioJogo();
 
             switch(escolhas){
@@ -1664,132 +1767,167 @@ public class SafeSaga{
                 
             }
             decisao = inicioQuiz();
+            do{
+                if(decisao == 1){
+                }   
+                    do{
+                        resposta =pergunta1();        
+                        
+                        if(resposta == 1){
+                        
+                            }else if(resposta == 2){
+                                if (pesquisarHabilidade(habilidades) == 1){
+                                    resposta =1;
+                                }
+                                if (pesquisarHabilidade(habilidades) == 2){
+                                    quiz = habilidadeSorte();
+                                    if(quiz == true){
+                                        resposta =1;
+                                    }else{
+                                        resposta =0;
+                                        vida = perdaDeVida(vida);
+                                    }
+                                
+                                }
+                            if (pesquisarHabilidade(habilidades) == 3){
+                                habilidadeTenteNovamente();
+                            }
+                            if (pesquisarHabilidade(habilidades) == 5){
+                                System.out.println("A resposta correta é:");
+                                System.out.println("Confidencialidade; integridade; disponibilidade; autenticidade");
+                                resposta=1;
+                            }else{
+                            resposta = 0;
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }while(resposta != 1 || resposta != 0);  
+                    
+                {if(pergunta2() == 1){
+                    
+                    }else if(pergunta2() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta3() == 1){
+                    
+                    }else if(pergunta3() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }
+                    if(pergunta4() == 1){
+                    
+                    }else if(pergunta4() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta5() == 1){
+                    
+                    }else if(pergunta5() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta6() == 1){
+                    
+                    }else if(pergunta6() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }
+                    if(pergunta7() == 1){
+                    
+                    }else if(pergunta7() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta8() == 1){
+                    
+                    }else if(pergunta8() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta9() == 1){
+                    
+                    }else if(pergunta9() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }
+                    if(pergunta10() == 1){
+                    
+                    }else if(pergunta10() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta11() == 1){
+                    
+                    }else if(pergunta11() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta12() == 1){
+                    
+                    }else if(pergunta12() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta13() == 1){
+                    
+                    }else if(pergunta13() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }
+                    if(pergunta14() == 1){
+                    
+                    }else if(pergunta14() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta15() == 1){
+                    
+                    }else if(pergunta15() == 2){
+                        pesquisarHabilidade(habilidades);
+                            
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }if(pergunta16() == true){
+                    
+                    }else{
+                        vida = perdaDeVida(vida);
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                    }
+                        
+                }while(vida>0 || pergunta16() == true);
             
-            if(decisao == 1){
-            } 
-                if(pergunta1() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                }
-                if(pergunta2() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                }
-                if(pergunta3() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                }
-                if(pergunta4() == true){
-                
-                }else if(pergunta4() == false){
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    
-                }
-                if(pergunta5() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta6() == true){
-                    
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta7() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta8() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta9() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta10() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta11() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta12() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta13() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta14() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta15() == true){
-                
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-                if(pergunta16() == true){
-                       
-                }else{
-                    vida = perdaDeVida(vida);
-                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(vida <= 0){
-                    fimDaLinha = 0;
-                }
-
-            break;
+        
             case 5:
             System.out.println("               Instruções: ");
 
