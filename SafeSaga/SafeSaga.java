@@ -15,7 +15,7 @@ import java.util.Random;
  */
 public class SafeSaga{
 
- static int menu() {
+    static int menu() {
     System.out.println("                   Bem Vindo ao Safe Saga.");
     System.out.println("\n                  =========================");
     System.out.println("                  |       1 - Jogar       |");
@@ -29,7 +29,7 @@ public class SafeSaga{
 
   }
 
- public static void habilidade() {
+    public static void habilidade() {
     System.out.println("1 - Pular - Caso não saiba a resposta pula o desafio do Hacker.");
     System.out.println("2 - Sorte - Jogue dois dados se o resultado for maior que 7 você passa esse desafio.");
     System.out.println("3 - Tente Novamente - você tem a oportunidade de responder novamente caso errou.");
@@ -38,7 +38,7 @@ public class SafeSaga{
     System.out.println("6 - Visão além do alcance - revela a resposta correta.");
   }
  
- static int inicioJogo(){
+    static int inicioJogo(){
      limpaTela();
     System.out.println("Você está no seu ambiente de trabalho, localizado no centro da cidade. "+ 
     "São 17h30 de uma sexta-feira, do dia 07/03/2003 e seu expediente está para terminar. Porém, "+
@@ -56,9 +56,9 @@ public class SafeSaga{
     return entrada.nextInt();
   }
  
- static int primeiraEscolha(){
-     limpaTela();
-    System.out.println("Ao sair tarde do trabalho (Por volta das 22h00), você lembra que precisava "+
+    static int primeiraEscolha(){
+        limpaTela();
+        System.out.println("Ao sair tarde do trabalho (Por volta das 22h00), você lembra que precisava "+
             "comprar o CD para o novo jogo que você gostaria de jogar, mas que agora era tarde para encontrar "+
             "uma loja aberta. Coincidentemente, ao andar algumas quadras até a estação do metro, você é  "+
             "abordado por um vendedor ambulante que lhe oferece alguns programas de computador e jogos "+ 
@@ -80,217 +80,208 @@ public class SafeSaga{
               
   }
  
- public static void decisao1Escolha1(){
+    public static void decisao1Escolha1(){
      limpaTela();
     System.out.println(" Poucos minutos depois você recebe um e-mail. Ansioso para ver o resultado, "+
               "clica no arquivo e é quando você recebe uma mensagem: 'Identificamos que você instalou um programa "+
               "no qual te deixou totalmente vulnerável. Vários dos seus dados foram roubados. Para que eu não libere' " +
               "para o mundo, vamos fazer um jogo");
-  }
+    }
  
- static int inicioQuiz(){
-     limpaTela();
-    System.out.println("As regras são simples. Farei uma série de perguntas pra testar seus conhecimentos sobre segurança da informação;"+
-    " sendo assim, tome muito cuidado ao dar suas respostas, seus dados dependem disso."+ 
-    " Acredito que você não tenha nenhuma habilidade especial para passar pelo meu “Quis da Redenção” isso poderia estragar meus planos"+
-     " de me divertir com você.\n Você está preparado para começar?\n"+
-    "1-)	Sim, vamos lá.\n"+
-    "0-)	Não, quero sair correndo\n");
-    Scanner entrada = new Scanner(System.in);
-    System.out.println("Digite a opção desejada");
+    static int inicioQuiz(){
+        limpaTela();
+        System.out.println("As regras são simples. Farei uma série de perguntas pra testar seus conhecimentos sobre segurança da informação;"+
+            " sendo assim, tome muito cuidado ao dar suas respostas, seus dados dependem disso."+ 
+            " Acredito que você não tenha nenhuma habilidade especial para passar pelo meu “Quis da Redenção” isso poderia estragar meus planos"+
+            " de me divertir com você.\n Você está preparado para começar?\n"+
+            "1-)	Sim, vamos lá.\n"+
+            "0-)	Não, quero sair correndo\n");
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite a opção desejada");
     
-    return entrada.nextInt(); 
-  }
+        return entrada.nextInt(); 
+    }
  
- public static void decisao1Alternatica2(){
-     limpaTela();
-    System.out.println("Ao encerrar o chat, você percebe que sua tela congela e um bloco de notas abre no seu monitor com a seguinte mensagem"+
-    " Não precisamos mais do seu e-mail, identificamos que você instalou um programa no qual te deixou totalmente vulnerável. Vários dos seus"+
-    " dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo"+
-    " Você fica completamente desesperado; todos os seus dados, como: Cartão de crédito, senha de banco, senha de redes sociais, e-mail,"+
-     " fotos intimas que você havia mandado para outras pretendentes entre pequenas outras coisas haviam sido roubados.\n\n");
-    System.out.println(" '- Hacker:'  Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para"+
-    " que algumas coisas não se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair"+
-    " bem com tudo isso, mais forte!!"
-    );
-
-  }
+    public static void decisao1Alternatica2(){
+        limpaTela();
+        System.out.println("Ao encerrar o chat, você percebe que sua tela congela e um bloco de notas abre no seu monitor com a seguinte mensagem"+
+            " Não precisamos mais do seu e-mail, identificamos que você instalou um programa no qual te deixou totalmente vulnerável. Vários dos seus"+
+            " dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo"+
+            " Você fica completamente desesperado; todos os seus dados, como: Cartão de crédito, senha de banco, senha de redes sociais, e-mail,"+
+            " fotos intimas que você havia mandado para outras pretendentes entre pequenas outras coisas haviam sido roubados.\n\n");
+        System.out.println(" '- Hacker:'  Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para"+
+            " que algumas coisas não se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair"+
+            " bem com tudo isso, mais forte!!");
+    }
  
- static int decisao2(){
-     limpaTela();
-    System.out.println("Ao sair mais cedo do trabalho, você vai correndo comprar seu lanche no Mc2000. Chegando lá, você vê que a fila enorme "+
-    "por conta do horário. Bom, você resolve esperar pacientemente para ser atendido. Neste meio período, você percebe é uma bela garota/garoto "+
-    "abordando as pessoas para fazer uma pesquisa e você até que fica empolgado para poder bater um papo com ela/ele. Chegada a sua vez, ela "+ 
-    "pergunta se você teria interesse em participar de uma pesquisa sobre provedores de internet e que no final da pesquisa haverá um brinde.\n "+
-    "Você começa a conversar com ela/ele e você sente uma “química” entre vocês dois.\n"+ 
-    "1-) Preencher todos os dados da pesquisa, pois você quer agradá-la/lo e não poderá fazer essa desfeita.\n"+
-    "2-) Diz que não quer preencher a pesquisa, mas que isso não deveria interferir em uma decisão para um encontro.\n");
-    Scanner entrada = new Scanner (System.in);
-    System.out.println("Qual sua decisão?");
-      
-    return entrada.nextInt();
-  }
+    static int decisao2(){
+        limpaTela();
+        System.out.println("Ao sair mais cedo do trabalho, você vai correndo comprar seu lanche no Mc2000. Chegando lá, você vê que a fila enorme "+
+            "por conta do horário. Bom, você resolve esperar pacientemente para ser atendido. Neste meio período, você percebe é uma bela garota/garoto "+
+            "abordando as pessoas para fazer uma pesquisa e você até que fica empolgado para poder bater um papo com ela/ele. Chegada a sua vez, ela "+ 
+            "pergunta se você teria interesse em participar de uma pesquisa sobre provedores de internet e que no final da pesquisa haverá um brinde.\n "+
+            "Você começa a conversar com ela/ele e você sente uma “química” entre vocês dois.\n"+ 
+            "1-) Preencher todos os dados da pesquisa, pois você quer agradá-la/lo e não poderá fazer essa desfeita.\n"+
+            "2-) Diz que não quer preencher a pesquisa, mas que isso não deveria interferir em uma decisão para um encontro.\n");
+        Scanner entrada = new Scanner (System.in);
+        System.out.println("Qual sua decisão?");
+        return entrada.nextInt();
+    }
  
- public static void decisao2Escolha1(){
-     limpaTela();
-    System.out.println("Ela/Ele agradece muito de passa pela gentileza e diz que irá te mandar uma mensagem de texto para marcar combinar um "+
-    "encontro. Você recebe ao final da pesquisa um CD de provedor de internet. Ela/Ele diz que é uma novidade e que você deveria ver como ela "+
-    "é super simples e leve de ser usado em qualquer máquina. Você não vê problema algum, afinal, isso tudo estava acontecendo dentro de uma "+
-    "grande rede de fast-food.\n ");
-    
-  }
+    public static void decisao2Escolha1(){
+        limpaTela();
+        System.out.println("Ela/Ele agradece muito de passa pela gentileza e diz que irá te mandar uma mensagem de texto para marcar combinar um "+
+            "encontro. Você recebe ao final da pesquisa um CD de provedor de internet. Ela/Ele diz que é uma novidade e que você deveria ver como ela "+
+            "é super simples e leve de ser usado em qualquer máquina. Você não vê problema algum, afinal, isso tudo estava acontecendo dentro de uma "+
+            "grande rede de fast-food.\n ");
+    }
  
- public static void decisao2Escolha2(){
-   limpaTela();
-    System.out.println("Ela/Ele fica um pouco chateado/a com sua resposta, mas diz que gostou muito de você e que, e mesmo assim, lhe dará o "+
-    "brinde sem preencher os dados e que passará o telefone dela/dele. Ele/ela te entrega um CD de provedor e, junto, um papel com o telefone. "+
-    "Você fica muito feliz com a atitude dela/dele e lembra de que de fato queria trocar seu provedor. Você não vê problema algum, afinal, isso "+
-    "tudo estava acontecendo dentro de uma grande rede de fast-food.");;
-  }
+    public static void decisao2Escolha2(){
+        limpaTela();
+        System.out.println("Ela/Ele fica um pouco chateado/a com sua resposta, mas diz que gostou muito de você e que, e mesmo assim, lhe dará o "+
+            "brinde sem preencher os dados e que passará o telefone dela/dele. Ele/ela te entrega um CD de provedor e, junto, um papel com o telefone. "+
+            "Você fica muito feliz com a atitude dela/dele e lembra de que de fato queria trocar seu provedor. Você não vê problema algum, afinal, isso "+
+            "tudo estava acontecendo dentro de uma grande rede de fast-food.");;
+    }
  
- public static void decisao2Final(){
-     limpaTela();
-    System.out.println("Você finalmente consegue comprar seu combo na lanchonete e vai correndo para casa aproveitar seu computador. Claro que "+
-    "você não poderia deixar de instalar o novo CD que você ganhou, porque quando você fosse conversar com ela/ele, teria que ter já algum "+
-    "assunto para iniciar.\n"+
-    "Ao finalizar a instalação, é onde seu pesadelo começa a acontecer. Seu computador congela e aparece uma mensagem 'Seu computador acaba de "+
-    "ser invadido e todos os seus dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo'\n"+
-    " - Hacker: 'Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para que algumas coisas não "+
-    "se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair bem com tudo isso, "+
-    "mais forte!!");
-  }
+    public static void decisao2Final(){
+        limpaTela();
+        System.out.println("Você finalmente consegue comprar seu combo na lanchonete e vai correndo para casa aproveitar seu computador. Claro que "+
+            "você não poderia deixar de instalar o novo CD que você ganhou, porque quando você fosse conversar com ela/ele, teria que ter já algum "+
+            "assunto para iniciar.\n"+
+            "Ao finalizar a instalação, é onde seu pesadelo começa a acontecer. Seu computador congela e aparece uma mensagem 'Seu computador acaba de "+
+            "ser invadido e todos os seus dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo'\n"+
+            " - Hacker: 'Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para que algumas coisas não "+
+            "se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair bem com tudo isso, "+
+            "mais forte!!");
+    }
  
- static int decisao3() {
-     limpaTela();
-      System.out.println("Você sai do serviço às 18:00 e vai com seus amigos"
-              + " para aquele momento happy hour e decide executar a tarefa dada"
-              + " em casa no final de semana, pois ninguém é de ferro. Depois de"
-              + " algumas bebidas você vai para o banheiro e lá você encontra um"
-              + " CD em uma capa com a etiqueta “presente de grego”. E você pensa... ");
-      System.out.println();
-      System.out.println(" Você pega ou não o CD? ");
-      System.out.println("1-) Você pega o CD.");
-      System.out.println("2-) Você não pega o CD. ");
-          Scanner entrada = new Scanner (System.in);
+    static int decisao3() {
+        limpaTela();
+        System.out.println("Você sai do serviço às 18:00 e vai com seus amigos"
+            + " para aquele momento happy hour e decide executar a tarefa dada"
+            + " em casa no final de semana, pois ninguém é de ferro. Depois de"
+            + " algumas bebidas você vai para o banheiro e lá você encontra um"
+            + " CD em uma capa com a etiqueta “presente de grego”. E você pensa... ");
+        System.out.println();
+        System.out.println(" Você pega ou não o CD? ");
+        System.out.println("1-) Você pega o CD.");
+        System.out.println("2-) Você não pega o CD. ");
+        Scanner entrada = new Scanner (System.in);
           
-    return entrada.nextInt();
-     }
+        return entrada.nextInt();
+    }
  
- public static void decisao3Escolha1(){
-     limpaTela();
-      System.out.println(" Você pega o CD e nem comenta para seus amigos sobre"
-              + " ele. Depois mais algumas bebidas você sente que chegou no seu"
-              + " limite e se despede dos parceiros e vai para sua casa, curioso"
-              + " para saber o que poderia ter de conteúdo no CD. Na sua casa"
-              + " você já vai para o seu computador e vai logo ler o CD "
-              + "encontrado e de inicio é iniciado um programa de instalação de"
-              + " um jogo que por coincidência você estava louco para comprar."
-              + " Você inicia a instalação do jogo normalmente e no final da "
-              + "instalação o programa pede para reiniciar o computador. Após"
-              + " iniciado o sistema operacional você percebe que tem algo de"
-              + " muito estranho, várias janelas sendo abertas e fechadas "
-              + "automaticamente durante inicialização do sistema operacional."
-              +" E do nada o sistema abre o bloco de notas com a"
-              + " mensagem “Olá fulano seu computador foi hackeado e para"
-              + " libera-lo você terá que pagar um valor de 5.000 mil reais”."
-              + " Você desesperado responde ao hacker que é novo no trabalho e"
-              + " tinha completado 2 meses recentemente e tem uma tarefa do"
-              + " serviço para fazer se não fizer pode até ser mandado embora"
-              + " como está no período de avaliação. O hacker pensou e decidiu"
-              + " propor um desafio para liberar o seu computador.");
-  }
- 
- public static void decisao3Escolha2(){
-     limpaTela();
-      System.out.println(" Você decide não pegar o CD, usa o banheiro e retorna"
-              + " para as bebidas juntos com os amigos. Logo depois de um tempo"
-              + " um de seus amigos vai ao banheiro e encontra o CD leva-o para"
-              + " a roda de amigos e fala sobre ele. E de todos os que estavam"
-              + " na mesa você era o único com computador em casa e logo você"
-              + " decide ficar com a mídia.Na sua casa você já vai para o seu"
-              + " computador e vai ler o CD encontrado e logo é iniciado um"
-              + " programa de instalação de um jogo que por coincidência você"
-              + " estava louco para comprar. A instalação do jogo fluí"
-              + " normalmente e no final da instalação o programa pede para"
-              + " reiniciar o computador. Após iniciado o sistema operacional"
-              + " você percebe tem algo muito estranho.  E do nada o sistema"
-              + " abre o bloco de notas com a mensagem “Olá fulano seu "
-              + "computador foi hackeado e para libera-lo você terá que"
-              + " pagar uma quantia de 5.000 mil reais”. Você desesperado"
-              + " responde ao hacker que é novo no trabalho e tinha completado"
-              + " 2 meses recentemente e tem uma tarefa do serviço para fazer"
-              + " se não fizer pode até pode ser mandado embora como está no"
-              + " período de avaliação. O hacker pensou e teve dó de você e"
-              + " decidiu propor um desafio para liberar o seu computador.");
-  }
- 
- static int decisao4(){
-     limpaTela();
-      System.out.println(" Você dispensa o happy hour com os amigos e alega que"
-              + " é novo no serviço e precisa mostrar trabalho. E durante o "
-              + "caminho você lembra que precisa comprar um jogo para testar "
-              + "seu novo computador.");
-                System.out.println(" E fica a dúvida passar ou não na loja"
-                        + " para comprar um jogo? ");
-                Scanner entrada = new Scanner (System.in);
+    public static void decisao3Escolha1(){
+        limpaTela();
+        System.out.println(" Você pega o CD e nem comenta para seus amigos sobre"
+            + " ele. Depois mais algumas bebidas você sente que chegou no seu"
+            + " limite e se despede dos parceiros e vai para sua casa, curioso"
+            + " para saber o que poderia ter de conteúdo no CD. Na sua casa"
+            + " você já vai para o seu computador e vai logo ler o CD "
+            + "encontrado e de inicio é iniciado um programa de instalação de"
+            + " um jogo que por coincidência você estava louco para comprar."
+            + " Você inicia a instalação do jogo normalmente e no final da "
+            + "instalação o programa pede para reiniciar o computador. Após"
+            + " iniciado o sistema operacional você percebe que tem algo de"
+            + " muito estranho, várias janelas sendo abertas e fechadas "
+            + "automaticamente durante inicialização do sistema operacional."
+            +" E do nada o sistema abre o bloco de notas com a"
+            + " mensagem “Olá fulano seu computador foi hackeado e para"
+            + " libera-lo você terá que pagar um valor de 5.000 mil reais”."
+            + " Você desesperado responde ao hacker que é novo no trabalho e"
+            + " tinha completado 2 meses recentemente e tem uma tarefa do"
+            + " serviço para fazer se não fizer pode até ser mandado embora"
+            + " como está no período de avaliação. O hacker pensou e decidiu"
+            + " propor um desafio para liberar o seu computador.");
+    }
+    public static void decisao3Escolha2(){
+        limpaTela();
+        System.out.println(" Você decide não pegar o CD, usa o banheiro e retorna"
+            + " para as bebidas juntos com os amigos. Logo depois de um tempo"
+            + " um de seus amigos vai ao banheiro e encontra o CD leva-o para"
+            + " a roda de amigos e fala sobre ele. E de todos os que estavam"
+            + " na mesa você era o único com computador em casa e logo você"
+            + " decide ficar com a mídia.Na sua casa você já vai para o seu"
+            + " computador e vai ler o CD encontrado e logo é iniciado um"
+            + " programa de instalação de um jogo que por coincidência você"
+            + " estava louco para comprar. A instalação do jogo fluí"
+            + " normalmente e no final da instalação o programa pede para"
+            + " reiniciar o computador. Após iniciado o sistema operacional"
+            + " você percebe tem algo muito estranho.  E do nada o sistema"
+            + " abre o bloco de notas com a mensagem “Olá fulano seu "
+            + "computador foi hackeado e para libera-lo você terá que"
+            + " pagar uma quantia de 5.000 mil reais”. Você desesperado"
+            + " responde ao hacker que é novo no trabalho e tinha completado"
+            + " 2 meses recentemente e tem uma tarefa do serviço para fazer"
+            + " se não fizer pode até pode ser mandado embora como está no"
+            + " período de avaliação. O hacker pensou e teve dó de você e"
+            + " decidiu propor um desafio para liberar o seu computador.");
+    }
+    static int decisao4(){
+        limpaTela();
+        System.out.println(" Você dispensa o happy hour com os amigos e alega que"
+            + " é novo no serviço e precisa mostrar trabalho. E durante o "
+            + "caminho você lembra que precisa comprar um jogo para testar "
+            + "seu novo computador.");
+        System.out.println(" E fica a dúvida passar ou não na loja"
+            + " para comprar um jogo? ");
+            Scanner entrada = new Scanner (System.in);
                                
-                System.out.println("1-) Vai na loja de games.  ");
-                System.out.println("2-) Direto para a sua casa  ");
+        System.out.println("1-) Vai na loja de games.  ");
+        System.out.println("2-) Direto para a sua casa  ");
                 
-                return entrada.nextInt();
-  }
- 
- public static void decisao4Escolha1(){
-     limpaTela();
-      System.out.println(" Na loja de games você nota que o preço do jogo"
-              + " interessado era muito alto e no momento estava sem dinheiro"
-              + " para compra-lo devido sua recente compra do computador."
-              + "Você abandona a loja e volta para o caminho da sua casa e lá"
-              + " lembra do CD que seu amigo achou no banheiro do boteco. "
-              + "Chegando na sua casa você corre para ver o conteúdo da mídia e"
-              + " logo percebe que se trata-se de um jogo. E logo o jogo que"
-              + " você queria comprar, ansioso você nem pensa duas vezes para"
-              + " instala-lo. A instalação do jogo fluí normalmente e no final"
-              + " da instalação o programa pede para reiniciar o computador."
-              + " Após iniciado o sistema operacional você percebe tem algo"
-              + " muito estranho, várias janelas pretas sendo abertas e fechando"
-              + " sozinho.  E do nada o sistema abre o bloco de notas com a"
-              + " mensagem “Olá fulano seu computador foi hackeado e para "
-              + "libera-lo você terá que pagar uma quantia de 5.000 mil reais”."
-              + " Você desesperado responde ao hacker que não tem o dinheiro e "
-              + "que é novo no trabalho e tinha completado 2 meses recentemente "
-              + "e tem uma tarefa do serviço para fazer se não fizer pode até "
-              + "pode ser mandado embora como está no período de avaliação. "
-              + "O hacker pensou e teve dó de você e decidiu propor um desafio "
-              + "para liberar o seu computador.");
-  }
- 
- public static void decisao4Escolha2(){
-     limpaTela();
-      System.out.println("Você foi direto para a sua casa e decide logo jantar "
-              + "para matar a fome que o incomodava. Após a refeição você decide"
-              + " ver o conteúdo da mídia no seu PC. De imediato foi executado "
-              + "um pacote de instalação de um jogo e você estava ansioso para "
-              + "testar o desempenho do seu novo computador e um jogo era tudo o"
-              + " que você queria. Você inicia a instalação sem nem pensar duas "
-              + "vezes e no final o programa pede para reiniciar o computador. "
-              + "Após iniciado o sistema operacional você percebe tem algo muito"
-              + " estranho, várias telas pretas aparecem durante a inicialização do"
-              + " Windows.  E do nada o sistema abre o bloco de notas com a "
-              + "mensagem “Olá fulano seu computador foi hackeado e para libera-lo"
-              + " você terá que pagar uma quantia de 5.000 mil reais”."
-              + "Você em um primeiro momento não acredita e pediu provas para o"
-              + " hacker e ele solicitou para você tentar abrir um documento e "
-              + "o documento solicitado era justo o trabalho que seu chefe tinha"
-              + " solicitado para você fazer. Em choque você entra em desespero "
-              + "e responde ao hacker que não tem o dinheiro e como é novo no "
-              + "trabalho e só tinha 2 meses serviço e este documento tem que "
-              + "ser entregue na segunda-feira se não pode até ser mandado "
-              + "embora como está no período de experiência."
-              +" O hacker pensou e teve dó de você e decidiu propor um desafio"
-              + " para liberar o seu computador. ");
-  }
-  
+        return entrada.nextInt();
+    }
+    public static void decisao4Escolha1(){
+        limpaTela();
+        System.out.println(" Na loja de games você nota que o preço do jogo"
+            + " interessado era muito alto e no momento estava sem dinheiro"
+            + " para compra-lo devido sua recente compra do computador."
+            + "Você abandona a loja e volta para o caminho da sua casa e lá"
+            + " lembra do CD que seu amigo achou no banheiro do boteco. "
+            + "Chegando na sua casa você corre para ver o conteúdo da mídia e"
+            + " logo percebe que se trata-se de um jogo. E logo o jogo que"
+            + " você queria comprar, ansioso você nem pensa duas vezes para"
+            + " instala-lo. A instalação do jogo fluí normalmente e no final"
+            + " da instalação o programa pede para reiniciar o computador."
+            + " Após iniciado o sistema operacional você percebe tem algo"
+            + " muito estranho, várias janelas pretas sendo abertas e fechando"
+            + " sozinho.  E do nada o sistema abre o bloco de notas com a"
+            + " mensagem “Olá fulano seu computador foi hackeado e para "
+            + "libera-lo você terá que pagar uma quantia de 5.000 mil reais”."
+            + " Você desesperado responde ao hacker que não tem o dinheiro e "
+            + "que é novo no trabalho e tinha completado 2 meses recentemente "
+            + "e tem uma tarefa do serviço para fazer se não fizer pode até "
+            + "pode ser mandado embora como está no período de avaliação. "
+            + "O hacker pensou e teve dó de você e decidiu propor um desafio "
+            + "para liberar o seu computador.");
+    } 
+    public static void decisao4Escolha2(){
+        limpaTela();
+        System.out.println("Você foi direto para a sua casa e decide logo jantar "
+            + "para matar a fome que o incomodava. Após a refeição você decide"
+            + " ver o conteúdo da mídia no seu PC. De imediato foi executado "
+            + "um pacote de instalação de um jogo e você estava ansioso para "
+            + "testar o desempenho do seu novo computador e um jogo era tudo o"
+            + " que você queria. Você inicia a instalação sem nem pensar duas "
+            + "vezes e no final o programa pede para reiniciar o computador. "
+            + "Após iniciado o sistema operacional você percebe tem algo muito"
+            + " estranho, várias telas pretas aparecem durante a inicialização do"
+            + " Windows.  E do nada o sistema abre o bloco de notas com a "
+            + "mensagem “Olá fulano seu computador foi hackeado e para libera-lo"
+            + " você terá que pagar uma quantia de 5.000 mil reais”."
+            + "Você em um primeiro momento não acredita e pediu provas para o"
+            + " hacker e ele solicitou para você tentar abrir um documento e "
+            + "o documento solicitado era justo o trabalho que seu chefe tinha"
+            + " solicitado para você fazer. Em choque você entra em desespero "
+            + "e responde ao hacker que não tem o dinheiro e como é novo no "
+            + "trabalho e só tinha 2 meses serviço e este documento tem que "
+            + "ser entregue na segunda-feira se não pode até ser mandado "
+            + "embora como está no período de experiência."
+            +" O hacker pensou e teve dó de você e decidiu propor um desafio"
+            + " para liberar o seu computador. ");
+    }
     public static int pergunta1(){ 
         limpaTela();
         Scanner entrada = new Scanner (System.in);
@@ -303,8 +294,6 @@ public class SafeSaga{
         alternativas.add("Confidencialidade; não repúdio; disponibilidade; autenticidade"); 
         alternativas.add("Confidencialidade; disponibilidade; autenticidade"); 
         alternativas.add("Integridade; disponibilidade; autenticidade"); 
-        
-        
             
         Collections.shuffle(alternativas);
             
@@ -368,9 +357,6 @@ public class SafeSaga{
                     
         return acertou;
     }
-    
-    
-
     public static int pergunta2() {
         Scanner entrada = new Scanner (System.in);
         int acertou = -2;
@@ -1645,14 +1631,16 @@ public class SafeSaga{
         for (int i=0; i<2; i++){
             
              face=aleatorio.nextInt(6) + 1;
+             System.out.println(face);
         }
-        System.out.println(face);
+        
         if(face >= 8){
             System.out.println("Parabens você passou para proxima pergunta");
             resultado = true;
         }else{
             System.out.println("Você acaba de perder uma habilidade assim que gosto. ahahahahaha");
             resultado = false;
+            
         }
         return resultado;
     } 
@@ -1660,8 +1648,6 @@ public class SafeSaga{
         int resposta = 2;
         return resposta;
     }
-    
-
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
@@ -1770,39 +1756,37 @@ public class SafeSaga{
             do{
                 if(decisao == 1){
                 }   
-                    do{
-                        resposta =pergunta1();        
+                
+                    resposta =pergunta1();        
                         
-                        if(resposta == 1){
+                    if(resposta == 1){
                         
-                            }else if(resposta == 2){
-                                if (pesquisarHabilidade(habilidades) == 1){
-                                    resposta =1;
-                                }
-                                if (pesquisarHabilidade(habilidades) == 2){
-                                    quiz = habilidadeSorte();
-                                    if(quiz == true){
-                                        resposta =1;
-                                    }else{
-                                        resposta =0;
-                                        vida = perdaDeVida(vida);
-                                    }
-                                
-                                }
-                            if (pesquisarHabilidade(habilidades) == 3){
-                                habilidadeTenteNovamente();
+                        }else if(resposta == 2){
+                            if (pesquisarHabilidade(habilidades) == 1){
+                                resposta =1;
                             }
-                            if (pesquisarHabilidade(habilidades) == 5){
-                                System.out.println("A resposta correta é:");
-                                System.out.println("Confidencialidade; integridade; disponibilidade; autenticidade");
-                                resposta=1;
-                            }else{
-                            resposta = 0;
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }while(resposta != 1 || resposta != 0);  
+                            if (pesquisarHabilidade(habilidades) == 2){
+                                quiz = habilidadeSorte();
+                                }if(quiz= true){
+                                    resposta =1;
+                                }else{
+                                    resposta =0;
+                                    vida = perdaDeVida(vida);
+                                }if (pesquisarHabilidade(habilidades) == 3){
+                                    habilidadeTenteNovamente();
+                                }if (pesquisarHabilidade(habilidades) == 5){
+                                    System.out.println("A resposta correta é:");
+                                    System.out.println("Confidencialidade; integridade; disponibilidade; autenticidade");
+                                    resposta=1;
+                                }else{
+                                    resposta = 0;
+                                    vida = perdaDeVida(vida);
+                                    System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                            }
+                        }
+                
                     
-                {if(pergunta2() == 1){
+                    if(pergunta2() == 1){
                     
                     }else if(pergunta2() == 2){
                         pesquisarHabilidade(habilidades);
@@ -1818,8 +1802,7 @@ public class SafeSaga{
                     }else{
                         vida = perdaDeVida(vida);
                         System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }
-                    if(pergunta4() == 1){
+                    }if(pergunta4() == 1){
                     
                     }else if(pergunta4() == 2){
                         pesquisarHabilidade(habilidades);
@@ -1924,10 +1907,11 @@ public class SafeSaga{
                         vida = perdaDeVida(vida);
                         System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
                     }
-                        
-                }while(vida>0 || pergunta16() == true);
+                break;
+
+            }while(vida>0 || pergunta16() == true);
             
-        
+                
             case 5:
             System.out.println("               Instruções: ");
 
@@ -1940,6 +1924,7 @@ public class SafeSaga{
 
         }
         }while(decisao != 0 || fimDaLinha > 0 || pergunta16() == true); 
+        
         if(decisao ==0){
         System.out.println("Fim de jogo!"
                 + " Seus dados foram expostos na internet e toda sua vida esta comprometida por conta disso,"
@@ -1954,5 +1939,6 @@ public class SafeSaga{
             +" conhecimentoem um assunto que se torna cada dia mais importante no mundo em que cada vez estamos mais conectados");
         }
         
-    }  
-}
+    }
+}  
+
