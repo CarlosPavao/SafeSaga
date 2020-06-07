@@ -353,10 +353,13 @@ public class SafeSaga{
                 acertou =2;
                 
                 break;
+            default:
+            System.out.println("Opção inválida. Escolha novamente.");
         }
                     
         return acertou;
     }
+    
     public static int pergunta2() {
         Scanner entrada = new Scanner (System.in);
         int acertou = -2;
@@ -429,7 +432,8 @@ public class SafeSaga{
             case 5:
                 acertou =2;
                 break;
-            
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");
         }
             return acertou;
     }
@@ -512,6 +516,9 @@ public class SafeSaga{
                     }
             case 6:
                 acertou = 2;
+                break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");
         }
         return acertou;
     }
@@ -584,6 +591,8 @@ public class SafeSaga{
             case 5:
                 acertou =2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");                
         }
         return acertou;
     }
@@ -668,6 +677,8 @@ public class SafeSaga{
                 case 6:
                     acertou =2;
                     break;
+                    default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     }
@@ -743,6 +754,8 @@ public class SafeSaga{
             case 5:
                 acertou =2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     }
@@ -914,6 +927,8 @@ public class SafeSaga{
             case 6:
                 acertou=2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     }
@@ -1000,6 +1015,8 @@ public class SafeSaga{
             case 6:
                 acertou=2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
             return acertou;
         }
@@ -1141,6 +1158,8 @@ public class SafeSaga{
             case 6:
                 acertou=2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     }
@@ -1216,6 +1235,8 @@ public class SafeSaga{
             case 5:
                 acertou=2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     }
@@ -1318,6 +1339,9 @@ public class SafeSaga{
                 break;
             case 6:
                 acertou=2;
+                break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     } 
@@ -1425,6 +1449,8 @@ public class SafeSaga{
             case 6:
                 acertou=2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     } 
@@ -1502,6 +1528,8 @@ public class SafeSaga{
             case 5:
                 acertou=2;
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
             
         return acertou;
@@ -1535,11 +1563,11 @@ public class SafeSaga{
     
         System.out.println();
     
-        System.out.println("1 -" + alternativas.get(0));
-        System.out.println("2 -" + alternativas.get(1));
-        System.out.println("3 -" + alternativas.get(2));
-        System.out.println("4 -" + alternativas.get(3));
-        System.out.println("5 -" + alternativas.get(4));
+        System.out.println("1 - " + alternativas.get(0));
+        System.out.println("2 - " + alternativas.get(1));
+        System.out.println("3 - " + alternativas.get(2));
+        System.out.println("4 - " + alternativas.get(3));
+        System.out.println("5 - " + alternativas.get(4));
         
         int opcao = entrada.nextInt();
             
@@ -1590,6 +1618,8 @@ public class SafeSaga{
                     acertou=false;
                 }
                 break;
+                default:
+            System.out.println("Opção inválida. Escolha novamente.");       
         }
         return acertou;
     } 
