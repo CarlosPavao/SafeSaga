@@ -1798,113 +1798,375 @@ public class SafeSaga{
                                         
                         resposta =pergunta1();        
                             
-                        if(resposta == 1){
-                            
-                        }else if(resposta == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-
-                        }else if(resposta == 5){
-                            mostrarHabilidades(habilidades);
-                            System.out.println("Qual habilidade você gostaria de usar?");
-                            int opçaoHabilidade =entrada.nextInt();
-                            habilidades[i]
-                            opçaoHabilidade = opçaoHabilidade -1;
-                            if(habilidades[opçaoHabilidade] == 1 ){
-
-                            }else if(habilidades[opçaoHabilidade] ==2){
-                                habilidadeSorte(vida);
-                            }
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 2:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
                         }
-                    
+                        break;
+                   
+                }
+                
+                resposta = pergunta2();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
                         
-                        if(pergunta2() == 1){
-                        
-                        }else if(pergunta2() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                        }if(pergunta3() == 1){
-                        
-                        }else if(pergunta3() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                        }if(pergunta4() == 1){
-                        
-                        }else if(pergunta4() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");pesquisarHabilidade(habilidades);
-                        }if(pergunta5() == 1){
-                        
-                        }else if(pergunta5() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                        
-                        }if(pergunta6() == 1){
-                        
-                        }else if(pergunta6() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
                         }
-                        if(pergunta7() == 1){
+                        break;
+                   
+                }
+                resposta = pergunta3();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
                         
-                        }else if(pergunta7() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                        }if(pergunta8() == 1){
-                        
-                        }else if(pergunta8() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                                
-                        }if(pergunta9() == 1){
-                        
-                        }else if(pergunta9() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                                
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
                         }
-                        if(pergunta10() == 1){
+                        break;
+                   
+                }
+                resposta = pergunta4();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
                         
-                        }else if(pergunta10() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                                
-                        }if(pergunta11() == 1){
-                        
-                        }else if(pergunta11() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                        
-                        }if(pergunta12() == 1){
-                        
-                        }else if(pergunta12() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                                
-                        }if(pergunta13() == 1){
-                        
-                        }else if(pergunta13() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                                
-                        }if(pergunta14() == 1){
-                        
-                        }else if(pergunta14() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                                
-                        }if(pergunta15() == 1){
-                        
-                        }else if(pergunta15() == 2){
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                        }if(pergunta16() == 1){
-                        
-                        }else{
-                            vida = perdaDeVida(vida);
-                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
                         }
-                    break;
+                        break;
+                   
+                }
+                resposta = pergunta5();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta6();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta7();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta8();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta9();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta10();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta11();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta12();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta13();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta14();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta15();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                resposta = pergunta16();
+                
+                switch (resposta) {
+                    case 1:
+                        break;
+                    case 0:
+                        vida = vida - perda;
+                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        break;
+                    case 5:
+                        mostrarHabilidades(habilidades);
+                        System.out.println("Qual habilidade você gostaria de usar?");
+                        int opçaoHabilidade =entrada.nextInt();
+                        opçaoHabilidade = opçaoHabilidade -1;
+                        habilidades[opçaoHabilidade] = 0;
+                        if(habilidades[opçaoHabilidade] == 1 ){
+                        
+                        }else if(habilidades[opçaoHabilidade] ==2){
+                        habilidadeSorte(vida);
+                        }
+                        break;
+                   
+                }
+                 
+                break;
                 case 2:
                     System.out.println("               Instruções: ");
 
@@ -1916,7 +2178,7 @@ public class SafeSaga{
                 case 3:
                 }
             break;    
-        }while(decisao != 4 || vida == 0); 
+        }while(vida > 0); 
         
         if(decisao ==0){
         System.out.println("Fim de jogo!"
@@ -1934,4 +2196,5 @@ public class SafeSaga{
        
     }
 }  
+
 
