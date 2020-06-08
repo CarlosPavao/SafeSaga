@@ -350,7 +350,7 @@ public class SafeSaga{
                 }
                 break;
             case 5:
-                acertou =2;
+                acertou =5;
                 
                 break;
             default:
@@ -430,7 +430,7 @@ public class SafeSaga{
                 }
                 break;
             case 5:
-                acertou =2;
+                acertou =5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");
@@ -515,7 +515,7 @@ public class SafeSaga{
                         acertou = 0;
                     }
             case 6:
-                acertou = 2;
+                acertou = 5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");
@@ -576,7 +576,7 @@ public class SafeSaga{
                     acertou=1;
                 } else {
                     System.out.println("Resposta incorreta");
-                    acertou = 0;
+                    acertou = 5;
                 }
                 break;
             case 4:
@@ -589,7 +589,7 @@ public class SafeSaga{
                 }
                 break;
             case 5:
-                acertou =2;
+                acertou =5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");                
@@ -675,7 +675,7 @@ public class SafeSaga{
                     }
                     break;
                 case 6:
-                    acertou =2;
+                    acertou =5;
                     break;
                     default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -752,7 +752,7 @@ public class SafeSaga{
                 }
                 break;
             case 5:
-                acertou =2;
+                acertou =5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -807,7 +807,7 @@ public class SafeSaga{
                 }
                 break;
             case 3:
-                acertou =2;
+                acertou =5;
                 break;
         }  
         return acertou;
@@ -925,7 +925,7 @@ public class SafeSaga{
                 }
                 break;
             case 6:
-                acertou=2;
+                acertou = 5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -1013,7 +1013,7 @@ public class SafeSaga{
                 }
                 break;
             case 6:
-                acertou=2;
+                acertou=5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -1065,7 +1065,7 @@ public class SafeSaga{
                 acertou=0;
             }
         case 3:
-            acertou=2;
+            acertou=5;
             break;
         }
         return acertou;
@@ -1156,7 +1156,7 @@ public class SafeSaga{
                 }
                 break;
             case 6:
-                acertou=2;
+                acertou=5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -1338,7 +1338,7 @@ public class SafeSaga{
                 }
                 break;
             case 6:
-                acertou=2;
+                acertou=5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -1447,7 +1447,7 @@ public class SafeSaga{
                 }
                 break;
             case 6:
-                acertou=2;
+                acertou=5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -1526,7 +1526,7 @@ public class SafeSaga{
                 }
                 break;
             case 5:
-                acertou=2;
+                acertou=5;
                 break;
                 default:
             System.out.println("Opção inválida. Escolha novamente.");       
@@ -1657,7 +1657,7 @@ public class SafeSaga{
         return habilidade;
     }
 
-    static int habilidadeSorte(){
+    static int habilidadeSorte(int vida){
         Random aleatorio = new Random();
         int face=0;
         int resultado = -1;
@@ -1682,6 +1682,31 @@ public class SafeSaga{
         int resposta = 2;
         return resposta;
     }
+    static void mostrarHabilidades(int []vetor){
+        for (int i = 0; i < vetor.length; i++) {
+            switch (vetor[i]) {
+                case 1:
+                System.out.println("Habilidade[" + (i + 1) + "]: Pular");
+                
+                break;
+                case 2:
+                System.out.println("Habilidade[" + (i + 1) + "]: Sorte");
+                break;
+                case 3:
+                System.out.println("Habilidade[" + (i + 1) + "]: Tente Novamente");
+                break;
+                case 4:
+                System.out.println("Habilidade[" + (i + 1) + "]: Bonus por acerto");
+                break;
+                case 5:
+                System.out.println("Habilidade[" + (i + 1) + "]: Ajuda dos universitários");
+                break;
+                case 6:
+                System.out.println("Habilidade[" + (i + 1) + "]: Visão alem do alcance");
+                break;
+            }
+        }
+    }
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
@@ -1697,276 +1722,201 @@ public class SafeSaga{
         int quiz= -1;
         
         do{
-        int opcao = menu();
+            int opcao = menu();
 
-        switch (opcao) {
-            case 1:
-            System.out.println("Vamos Criar o Seu personagem: ");
-            System.out.println();
-            System.out.println("Como vai se chamar seu personagem?");
-            nomePersonagem = entrada.next();
-            
-            limpaTela();
-            
-            do {
-                System.out.println("\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode"
-                + " ser escolhida mais de uma vez.");  
-                habilidade();
-                for (int i = 0; i < 5; i++) {
-                habilidades[i] = entrada.nextInt();
-                }
+            switch (opcao) {
+                case 1:
+                System.out.println("Vamos Criar o Seu personagem: ");
+                System.out.println();
+                System.out.println("Como vai se chamar seu personagem?");
+                nomePersonagem = entrada.next();
                 
                 limpaTela();
                 
-                System.out.println(nomePersonagem+ " Voce escolheu as seguintes habilidades: ");
-                
-                for (int i = 0; i < habilidades.length; i++) {
-                switch (habilidades[i]) {
+                do {
+                    System.out.println("\nEscolha  ate 5 habilidades dentre essas abaixo:\n Uma habilidade pode"
+                    + " ser escolhida mais de uma vez.");  
+                    habilidade();
+                    for (int i = 0; i < 5; i++) {
+                    habilidades[i] = entrada.nextInt();
+                    }
+                    
+                    limpaTela();
+                    
+                    System.out.println(nomePersonagem+ " Voce escolheu as seguintes habilidades: ");
+                    mostrarHabilidades(habilidades);
+                    
+                    System.out.println("Você confirma as habilidade:\n1-Sim\n2-Não");
+                    confirma = entrada.nextInt();
+                } while (confirma != 1);
+                limpaTela();
+                int escolhas = inicioJogo();
+
+                switch(escolhas){
                     case 1:
-                    System.out.println("Habilidade[" + (i + 1) + "]: Pular");
+                    decisao = primeiraEscolha();
+                    if(decisao == 1){
+                        decisao1Escolha1();
+                        System.out.println("");
+                    }else if(decisao ==2){
+                        decisao1Alternatica2();
+                        System.out.println("");
+                    }
                     break;
                     case 2:
-                    System.out.println("Habilidade[" + (i + 1) + "]: Sorte");
+                    decisao = decisao2();
+                    if(decisao == 1){
+                        decisao2Escolha1();
+                    }else if(decisao ==2){
+                        decisao2Escolha2();
+                    }
+                    decisao2Final();
                     break;
                     case 3:
-                    System.out.println("Habilidade[" + (i + 1) + "]: Tente Novamente");
+                    decisao = decisao3();
+                    if(decisao == 1){
+                        decisao3Escolha1();
+                    } else if (decisao == 2){
+                        decisao3Escolha2();
+                    }
                     break;
                     case 4:
-                    System.out.println("Habilidade[" + (i + 1) + "]: Bonus por acerto");
+                    decisao = decisao4();
+                    if(decisao == 1){
+                        decisao4Escolha1();
+                    } else if (decisao == 2){
+                        decisao4Escolha2();
+                    }
                     break;
-                    case 5:
-                    System.out.println("Habilidade[" + (i + 1) + "]: Ajuda dos universitários");
-                    break;
-                    case 6:
-                    System.out.println("Habilidade[" + (i + 1) + "]: Visão alem do alcance");
-                    break;
+                    
                 }
-                }
-                System.out.println("Você confirma as habilidade:\n1-Sim\n2-Não");
-                confirma = entrada.nextInt();
-            } while (confirma != 1);
-            limpaTela();
-            int escolhas = inicioJogo();
-
-            switch(escolhas){
-                case 1:
-                decisao = primeiraEscolha();
-                if(decisao == 1){
-                    decisao1Escolha1();
-                    System.out.println("");
-                }else if(decisao ==2){
-                    decisao1Alternatica2();
-                    System.out.println("");
-                }
-                break;
-                case 2:
-                decisao = decisao2();
-                if(decisao == 1){
-                    decisao2Escolha1();
-                }else if(decisao ==2){
-                    decisao2Escolha2();
-                }
-                decisao2Final();
-                break;
-                case 3:
-                decisao = decisao3();
-                if(decisao == 1){
-                    decisao3Escolha1();
-                } else if (decisao == 2){
-                    decisao3Escolha2();
-                }
-                break;
-                case 4:
-                decisao = decisao4();
-                if(decisao == 1){
-                    decisao4Escolha1();
-                } else if (decisao == 2){
-                    decisao4Escolha2();
-                }
-                break;
                 
-            }
-            decisao = inicioQuiz();
-            
-                if(decisao == 1){
-                }   
-                                    
-                    resposta =pergunta1();        
-                        
-                    if(resposta == 1){
-                        
-                    }else if(resposta == 2){
-                        for (int i = 0; i < habilidades.length; i++) {
-                            switch (habilidades[i]) {
-                                case 1:
-                                System.out.println("Habilidade[" + (i + 1) + "]: Pular");
-                                break;
-                                case 2:
-                                System.out.println("Habilidade[" + (i + 1) + "]: Sorte");
-                                break;
-                                case 3:
-                                System.out.println("Habilidade[" + (i + 1) + "]: Tente Novamente");
-                                break;
-                                case 4:
-                                System.out.println("Habilidade[" + (i + 1) + "]: Bonus por acerto");
-                                break;
-                                case 5:
-                                System.out.println("Habilidade[" + (i + 1) + "]: Ajuda dos universitários");
-                                break;
-                                case 6:
-                                System.out.println("Habilidade[" + (i + 1) + "]: Visão alem do alcance");
-                                break;
+                decisao = inicioQuiz();
+                
+                    if(decisao == 1){
+                    }   
+                                        
+                        resposta =pergunta1();        
+                            
+                        if(resposta == 1){
+                            
+                        }else if(resposta == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+
+                        }else if(resposta == 5){
+                            mostrarHabilidades(habilidades);
+                            System.out.println("Qual habilidade você gostaria de usar?");
+                            int opçaoHabilidade =entrada.nextInt();
+                            habilidades[i]
+                            opçaoHabilidade = opçaoHabilidade -1;
+                            if(habilidades[opçaoHabilidade] == 1 ){
+
+                            }else if(habilidades[opçaoHabilidade] ==2){
+                                habilidadeSorte(vida);
                             }
                         }
-                        System.out.println("Qual habilidade você gostaria de usar?");
-                        int opçaoHabilidade =entrada.nextInt();
-                        opçaoHabilidade = opçaoHabilidade -1;
-                        if(habilidades[opçaoHabilidade] == 1 ){
-
-                        }else if(habilidades[opçaoHabilidade] ==2){
-                            habilidadeSorte();
+                    
+                        
+                        if(pergunta2() == 1){
+                        
+                        }else if(pergunta2() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }if(pergunta3() == 1){
+                        
+                        }else if(pergunta3() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }if(pergunta4() == 1){
+                        
+                        }else if(pergunta4() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");pesquisarHabilidade(habilidades);
+                        }if(pergunta5() == 1){
+                        
+                        }else if(pergunta5() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        
+                        }if(pergunta6() == 1){
+                        
+                        }else if(pergunta6() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
                         }
-                    }
-                
-                    
-                    if(pergunta2() == 1){
-                    
-                    }else if(pergunta2() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta3() == 1){
-                    
-                    }else if(pergunta3() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta4() == 1){
-                    
-                    }else if(pergunta4() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta5() == 1){
-                    
-                    }else if(pergunta5() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta6() == 1){
-                    
-                    }else if(pergunta6() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }
-                    if(pergunta7() == 1){
-                    
-                    }else if(pergunta7() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta8() == 1){
-                    
-                    }else if(pergunta8() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta9() == 1){
-                    
-                    }else if(pergunta9() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }
-                    if(pergunta10() == 1){
-                    
-                    }else if(pergunta10() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta11() == 1){
-                    
-                    }else if(pergunta11() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta12() == 1){
-                    
-                    }else if(pergunta12() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta13() == 1){
-                    
-                    }else if(pergunta13() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }
-                    if(pergunta14() == 1){
-                    
-                    }else if(pergunta14() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta15() == 1){
-                    
-                    }else if(pergunta15() == 2){
-                        pesquisarHabilidade(habilidades);
-                            
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }if(pergunta16() == 1){
-                    
-                    }else{
-                        vida = perdaDeVida(vida);
-                        System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
-                    }
+                        if(pergunta7() == 1){
+                        
+                        }else if(pergunta7() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }if(pergunta8() == 1){
+                        
+                        }else if(pergunta8() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                                
+                        }if(pergunta9() == 1){
+                        
+                        }else if(pergunta9() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                                
+                        }
+                        if(pergunta10() == 1){
+                        
+                        }else if(pergunta10() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                                
+                        }if(pergunta11() == 1){
+                        
+                        }else if(pergunta11() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        
+                        }if(pergunta12() == 1){
+                        
+                        }else if(pergunta12() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                                
+                        }if(pergunta13() == 1){
+                        
+                        }else if(pergunta13() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                                
+                        }if(pergunta14() == 1){
+                        
+                        }else if(pergunta14() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                                
+                        }if(pergunta15() == 1){
+                        
+                        }else if(pergunta15() == 2){
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }if(pergunta16() == 1){
+                        
+                        }else{
+                            vida = perdaDeVida(vida);
+                            System.out.println("Você acaba de perde 20% de seus dados: voce tem agora somente "+vida+"%");
+                        }
+                    break;
+                case 2:
+                    System.out.println("               Instruções: ");
+
+                    System.out.println("Digite o número 0 para retornar ao menu");
+                    System.out.println("Digite o número 4 para sair do jogo");
+                    decisao = entrada.nextInt();
+
                 break;
-
-            
-            
-                
-        case 2:
-            System.out.println("               Instruções: ");
-
-            System.out.println("Digite o número 0 para retornar ao menu");
-            System.out.println("Digite o número 4 para sair do jogo");
-            decisao = entrada.nextInt();
-
-        break;
-        case 3:
-    }
-    break;    
-    }while(decisao == 4 ); 
+                case 3:
+                }
+            break;    
+        }while(decisao != 4 || vida == 0); 
         
         if(decisao ==0){
         System.out.println("Fim de jogo!"
@@ -1976,7 +1926,7 @@ public class SafeSaga{
             System.out.println("Você ate que foi longe demais nunca que voce seria capaz de me vencer,"
             +" Felizmente seus dados acabam de ser compartilhados na intenet, agora aguarde as consequencias do que voce acho"
             +" que nunca ninguem saberia");
-        }else if(pergunta16()==1){
+        }else{
             System.out.println("Parabéns, voce chegou ao fim de nosso desafio, espero que tenha aprendido algo com esse jogo"
             +" pois o intuito alem de ser um jogo para entreterimento pessoal nesse momento de quarentena é para ganhar um maior"
             +" conhecimentoem um assunto que se torna cada dia mais importante no mundo em que cada vez estamos mais conectados");
