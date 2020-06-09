@@ -521,7 +521,7 @@ public class SafeSaga {
                     acertou = 0;
                 }
             case 6:
-                acertou = 5;
+                acertou = 6;
                 break;
             default:
                 System.out.println("Opção inválida. Escolha novamente.");
@@ -1092,7 +1092,7 @@ public class SafeSaga {
                     acertou = 0;
                 }
             case 3:
-                acertou = 5;
+                acertou = 3;
                 break;
         }
         return acertou;
@@ -1182,7 +1182,7 @@ public class SafeSaga {
                     acertou = 0;
                 }
                 break;
-            case 6:
+            case 5:
                 acertou = 5;
                 break;
             default:
@@ -1700,19 +1700,10 @@ public class SafeSaga {
         }
     }
 
-    public static int perdaDeVida(final int a) {
-
-        final int perda = 20;
-        int resultado;
-
-        resultado = a - perda;
-
-        return resultado;
-    }
-
     public static int desafio1(int[] vetor) {
         Scanner entrada = new Scanner(System.in);
         int resposta = pergunta1();
+        int opçaoHabilidade;
 
         switch (resposta) {
             case 1:
@@ -1727,7 +1718,7 @@ public class SafeSaga {
                 mostrarHabilidades(vetor);
 
                 System.out.println("Qual habilidade você gostaria de usar?");
-                int opçaoHabilidade = entrada.nextInt();
+                 opçaoHabilidade = entrada.nextInt();
 
                 opçaoHabilidade = opçaoHabilidade - 1;
 
@@ -1836,7 +1827,7 @@ public class SafeSaga {
 
                 return 0;
 
-            case 5:
+            case 6:
                 mostrarHabilidades(vetor);
 
                 System.out.println("Qual habilidade você gostaria de usar?");
@@ -2250,7 +2241,7 @@ public class SafeSaga {
 
                 return 0;
 
-            case 5:
+            case 3:
                 mostrarHabilidades(vetor);
 
                 System.out.println("Qual habilidade você gostaria de usar?");
@@ -2274,7 +2265,7 @@ public class SafeSaga {
                     case 3:
 
                         System.out.println("1-) Certo");
-                        System.out.println("2-) Errad0");
+                        System.out.println("2-) Errado");
                         resposta = entrada.nextInt();
                         if (resposta == 1) {
                             return 1;
@@ -2689,6 +2680,7 @@ public class SafeSaga {
 
                         System.out.println("Você confirma as habilidades:\n1-Sim\n2-Não");
                         confirma = entrada.nextInt();
+                            
                     } while (confirma != 1);
 
                     limpaTela();
@@ -2733,238 +2725,240 @@ public class SafeSaga {
                     }
 
                     decisao = inicioQuiz();
-                 
+                    if(decisao == 1 ){    
+                        resposta = desafio1(habilidades);
+                        do {
+                            if (resposta == 1) {
 
-                    resposta = desafio1(habilidades);
-                    do {
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else {
+                                resposta = desafio2(habilidades);
 
-                            resposta = desafio2(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else {
+                                resposta = desafio3(habilidades);
 
-                            resposta = desafio3(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio4(habilidades);
 
-                            resposta = desafio4(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio5(habilidades);
 
-                            resposta = desafio5(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio6(habilidades);
 
-                            resposta = desafio6(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio7(habilidades);
 
-                            resposta = desafio7(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio8(habilidades);
 
-                            resposta = desafio8(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio9(habilidades);
 
-                            resposta = desafio9(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio10(habilidades);
 
-                            resposta = desafio10(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio11(habilidades);
 
-                            resposta = desafio11(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio12(habilidades);
 
-                            resposta = desafio12(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio13(habilidades);
 
-                            resposta = desafio13(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio14(habilidades);
 
-                            resposta = desafio14(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio15(habilidades);
 
-                            resposta = desafio15(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");
+                            }
+                            if (vida == 0) {
+                                break;
+                            } else if (vida > 0) {
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                        }
-                        if (vida == 0) {
-                            break;
-                        } else if (vida > 0) {
+                                resposta = desafio16(habilidades);
 
-                            resposta = desafio16(habilidades);
+                            }
+                            if (resposta == 1) {
 
-                        }
-                        if (resposta == 1) {
+                            } else {
+                                vida = vida - 20;
+                                System.out.println("Você acaba de perde 20% de seus dados: "
+                                        + "você tem agora somente " + vida + "%");                            
+                            }
+                            if (vida > 0 ){
+                                limpaTela();
+                                System.out.println("Você ganhou! Você conseguiu recuperar: "+ vida +"% dos seus dados.");
+                                vencedor =1;
+                                break;
+                            }
+                            
 
-                        } else {
-                            vida = vida - 20;
-                            System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");                            
-                        }
-                        if (vida > 0 ){
-                            limpaTela();
-                            System.out.println("Você ganhou! Você conseguiu recuperar: "+ vida +"% dos seus dados.");
-                            vencedor =1;
-                            break;
-                        }
-                        
-
-                    } while (vida > 0 && vencedor != 1);
-                     break;
-                     
+                        } while (vida > 0 && vencedor != 1);
+                        break;
+                    }else{
+                        vida =0;
+                        break;
+                    } 
                      
                   
                 case 2:
@@ -3016,7 +3010,7 @@ public class SafeSaga {
                     System.out.println("Opção inválida!");
                     break;
             }
-        } while (opcao != 4 && vida > 0 && vencedor !=1);
+        } while (opcao != 4 && vida > 0 && vencedor !=1 && decisao == 0);
 
         if (opcao == 4 ) {
             System.out.println("Espero revê-lo em breve.");
