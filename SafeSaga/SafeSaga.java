@@ -49,7 +49,7 @@ public class SafeSaga {
         System.out.println("1- ) Ficar até mais tarde no trabalho.");
         System.out.println("2- ) Sair no horário e passar no Mc2000 para comprar um Big2000.");
         System.out.println("3- ) Happy hour. ");
-        System.out.println("4- ) Ir para casa e terminar a tarefa designada a ti.");
+        System.out.println("4- ) Ir para casa e terminar a tarefa designada a você.");
         final Scanner entrada = new Scanner(System.in);
         System.out.println("Digite a opção desejada");
         return entrada.nextInt();
@@ -1681,7 +1681,7 @@ public class SafeSaga {
         return resultado;
     }
 
-    public static void mostrarHabilidades(final int[] vetor) {
+    public static void mostrarHabilidades(int[] vetor) {
 
         for (int i = 0; i < vetor.length; i++) {
             switch (vetor[i]) {
@@ -1704,7 +1704,7 @@ public class SafeSaga {
     public static int desafio1(int[] vetor) {
         Scanner entrada = new Scanner(System.in);
         int resposta = pergunta1();
-        int opçaoHabilidade;
+        int opcaoHabilidade;
 
         switch (resposta) {
             case 1:
@@ -1719,11 +1719,11 @@ public class SafeSaga {
                 mostrarHabilidades(vetor);
 
                 System.out.println("Qual habilidade você gostaria de usar?");
-                opçaoHabilidade = entrada.nextInt();
+                opcaoHabilidade = entrada.nextInt();
 
-                opçaoHabilidade = opçaoHabilidade - 1;
+                opcaoHabilidade = opcaoHabilidade - 1;
 
-                switch (vetor[opçaoHabilidade]) {
+                switch (vetor[opcaoHabilidade]) {
                     case 1:
 
                         return 1;
@@ -1754,7 +1754,7 @@ public class SafeSaga {
                                 + "disponibilidade; autenticidade");
                         return 1;
                 }
-                vetor[opçaoHabilidade] = 0;
+                vetor[opcaoHabilidade] = 0;
         }
         return 1;
     }
@@ -2973,6 +2973,33 @@ public class SafeSaga {
                             + "ensinados aqui. O objetivo é ensinar a todos como manter nossas informações seguras em tempos que cada vez mais\n"
                             + " estamos expostos a ataques hackers e perda de nossos dados que cada dia que passa se torna mais e mais importante. \n"
                             + "Venha se divertir com essa história envolvente.");
+        System.out.println();
+                    
+        System.out.println("            Habilidades");
+        System.out.println();
+        
+        System.out.println("Elas são para facilitar a sua vida no jogo ela só pode ser utilizada a quantidade\n"
+                + " de vezes que você a escolheu você tem o direito de escolher 4 habilidades\n"
+                + " no total exemplo: 2 pular questão, 1 sorte e 1 bônus por acerto.");
+        System.out.println();
+        
+        System.out.println("            Pular");
+        System.out.println("Se não souber a alternativa correta passe para próxima pergunta, essa atual será anulada.");
+        System.out.println();
+        System.out.println("            Sorte");
+        System.out.println("Jogue dois dados se o resultado for maior que 8 você acertou essa pergunta.");
+        System.out.println();
+        System.out.println("            Ajuda dos Universitários");
+        System.out.println("Ficam somente duas alternativas do desafio.");
+        System.out.println();
+        System.out.println("            Visão além do alcance");
+        System.out.println("Revela a resposta correta.");
+                    
+                    System.out.println();
+                    
+                    
+               
+                    
                     System.out.println();
                     System.out.println();
 
@@ -3001,7 +3028,8 @@ public class SafeSaga {
 
                 case 4:
                     System.out.println("");
-                    System.out.println("Você selecionou sair.");
+                    System.out.println("Você optou por sair.");
+                    System.out.println();
                     break;
 
                 default:
@@ -3035,5 +3063,4 @@ public class SafeSaga {
         }
 
     }
-
 }
