@@ -2657,6 +2657,7 @@ public class SafeSaga {
         String nomePersonagem;
         int opcao;
         int vencedor = 0;
+        int ultimaEscolha;
 
         do {
 
@@ -2947,14 +2948,19 @@ public class SafeSaga {
 
                         }
                         if (resposta == 1) {
-                            vencedor = 1;
-                            break;
+
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "você tem agora somente " + vida + "%");
-                                                        
+                                    + "você tem agora somente " + vida + "%");                            
                         }
+                        if (vida > 0 ){
+                            limpaTela();
+                            System.out.println("Você ganhou! Você conseguiu recuperar:"+ vida +"% dos seus dados.");
+                            vencedor =1;
+                            break;
+                        }
+                        
 
                     } while (vida > 0 && vencedor != 1);
                      break;
@@ -3024,11 +3030,23 @@ public class SafeSaga {
         else if (vida == 0) {
             System.out.println();
             System.out.println("Você perdeu todos os dados foram expostos na internet!");
+            System.out.println();
+            System.out.println("Deseja jogar novamente?\n1-Sim\n2-Não");
+            ultimaEscolha = entrada.nextInt();
+            if (ultimaEscolha == 1){
+                menu();
+            }
+            else{
+                limpaTela();
+                System.out.println("Tchauuuu!");
+            }
             
         } else {
-            System.out.println("Parabéns, voce chegou ao fim de nosso desafio, espero que tenha aprendido algo com esse jogo"
-                    + " pois o intuito alem de ser um jogo para entreterimento pessoal nesse momento de quarentena é para ganhar um maior"
-                    + " conhecimentoem um assunto que se torna cada dia mais importante no mundo em que cada vez estamos mais conectados");
+            System.out.println();
+            System.out.println("Parabéns! Você chegou ao fim de nosso desafio, espero que tenha aprendido\n"
+                    + " algo com este jogo pois o intuito além de ser um jogo para entretenimento pessoal \n"
+                    + "nesse momento de quarentena, é também para ganhar um pouco mais de conhecimento em um assunto que se\n"
+                    + " torna cada dia mais importante no mundo em que cada vez estamos mais conectados.");
         }
 
  }
