@@ -1,6 +1,7 @@
-
-
-import java.util.ArrayList;
+O que outras pessoas estão dizendo
+O  that  OUTRAS  PESSOAS  estao  dizendo
+O que outras pessoas estão dizendo
+importar  java . util . ArrayList ;
 import java.util.Scanner;
 import java.util.Collections;
 import java.util.List;
