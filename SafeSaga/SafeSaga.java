@@ -2956,7 +2956,7 @@ public class SafeSaga {
                         }
                         if (vida > 0 ){
                             limpaTela();
-                            System.out.println("Você ganhou! Você conseguiu recuperar:"+ vida +"% dos seus dados.");
+                            System.out.println("Você ganhou! Você conseguiu recuperar: "+ vida +"% dos seus dados.");
                             vencedor =1;
                             break;
                         }
