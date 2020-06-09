@@ -49,7 +49,7 @@ public class SafeSaga {
         System.out.println("1- ) Ficar até mais tarde no trabalho.");
         System.out.println("2- ) Sair no horário e passar no Mc2000 para comprar um Big2000.");
         System.out.println("3- ) Happy hour. ");
-        System.out.println("4- ) Ir para casa e terminar a tarefa designada a você.");
+        System.out.println("4- ) Ir para casa e terminar a tarefa designada a ti.");
         final Scanner entrada = new Scanner(System.in);
         System.out.println("Digite a opção desejada");
         return entrada.nextInt();
