@@ -2734,7 +2734,7 @@ public class SafeSaga {
 
                     decisao = inicioQuiz();
                  
-
+               
                     resposta = desafio1(habilidades);
                     do {
                         if (resposta == 1) {
@@ -3007,8 +3007,13 @@ public class SafeSaga {
                     break;
                   
                 case 4:
-                    System.out.println("");
-                    System.out.println("Você selecionou sair.");
+                    limpaTela();
+                    System.out.println();
+                    System.out.println("Você optou por sair.");
+                    System.out.println();
+                    break;
+                case 0:
+                    vida = 0;
                     break;
                     
                 default:
