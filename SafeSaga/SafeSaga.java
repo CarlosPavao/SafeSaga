@@ -15,25 +15,25 @@ import java.util.Random;
  */
 public class SafeSaga {
 
-    static int menu() {
+   static int menu() {
         System.out.println("                   Bem Vindo ao Safe Saga.");
         System.out.println("\n                  =========================");
         System.out.println("                  |       1 - Jogar       |");
-        System.out.println("                  |     2 - instruções    |");
-        System.out.println("                  |      3 - Creditos     |");
+        System.out.println("                  |     2 - Instruções    |");
+        System.out.println("                  |      3 - Créditos     |");
         System.out.println("                  |        4 - Sair       |");
         System.out.println("                  =========================\n");
         final Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite a opção desejada");
+        System.out.println("Digite a opção desejada:");
         return entrada.nextInt();
 
     }
 
     public static void habilidade() {
-        System.out.println("1 - Pular - Caso não saiba a resposta pula o desafio do Hacker.");
+        System.out.println("1 - Pular - Caso não saiba a resposta, você pula um desafio do Hacker.");
         System.out.println("2 - Sorte - Jogue dois dados se o resultado for maior que 7 você passa esse desafio.");
-        System.out.println("3 - Ajuda dos Universitarios - Fica somente Duas alternativas do desafio.");
-        System.out.println("4 - Visão além do alcance - revela a resposta correta.");
+        System.out.println("3 - Ajuda dos Universitários - Ficam somente duas alternativas do desafio.");
+        System.out.println("4 - Visão além do alcance - Revela a resposta correta.");
     }
 
     static int inicioJogo() {
@@ -65,9 +65,9 @@ public class SafeSaga {
                 + "Chegando em casa você não pensa duas vezes e já inicia a instalação do jogo e faz o procedimento "
                 + "para 'crackear'. Porém, você lembra que havia marcado um horário no chat online com uma pessoa na"
                 + "qual você conheceu na internet a alguns dias. Sendo assim, você vai para seu encontro virtual.\n"
-                + "Lá estava sua/seu correspondente te esperando. Entre uma longa conversa, chega um momento em que "
+                + "Lá estava sua correspondente te esperando. Entre uma longa conversa, chega um momento em que "
                 + "sua/seu correspondente lhe pede seu e-mail para que possa enviar fotos intimas, assim você poderá "
-                + "saber como de fato ela/ele é.");
+                + "saber como de fato ela é.");
         System.out.println("O que você quer fazer? ");
         System.out.println("1-)Passa seu e-mail, pois está super curioso. ");
         System.out.println("2-)Da uma desculpa que precisar ir embora pois tem que testar um novo 'programa'"
@@ -96,7 +96,7 @@ public class SafeSaga {
                 + " de me divertir com você.\n Você está preparado para começar?\n" + "1-)	Sim, vamos lá.\n"
                 + "0-)	Não, quero sair correndo\n");
         final Scanner entrada = new Scanner(System.in);
-        System.out.println("Digite a opção desejada");
+        System.out.println("Digite a opção desejada:");
 
         return entrada.nextInt();
     }
@@ -2646,9 +2646,9 @@ public class SafeSaga {
         return 1;
     }
 
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int vida = 0;
+        int vida = 100;
 
         int[] habilidades = new int[3];
         int confirma = 0;
@@ -2656,10 +2656,11 @@ public class SafeSaga {
         int resposta = -2;
         String nomePersonagem;
         int opcao;
+        int vencedor = 0;
 
         do {
 
-            vida = 100;
+            //vida = 100;
             opcao = menu();
 
             switch (opcao) {
@@ -2673,8 +2674,8 @@ public class SafeSaga {
                     limpaTela();
 
                     do {
-                        System.out.println("\nEscolha  ate 3 habilidades dentre essas abaixo:\n Uma habilidade pode"
-                                + " ser escolhida mais de uma vez.");
+                        System.out.println("\nEscolha 3 dessas habilidades:\n A mesma habilidade pode"
+                                + " ser escolhida até 3 vezes.");
                         habilidade();
                         for (int i = 0; i < habilidades.length; i++) {
                             habilidades[i] = entrada.nextInt();
@@ -2682,10 +2683,10 @@ public class SafeSaga {
 
                         limpaTela();
 
-                        System.out.println(nomePersonagem + " Voce escolheu as seguintes habilidades: ");
+                        System.out.println(nomePersonagem + " Você escolheu as seguintes habilidades: ");
                         mostrarHabilidades(habilidades);
 
-                        System.out.println("Você confirma as habilidade:\n1-Sim\n2-Não");
+                        System.out.println("Você confirma as habilidades:\n1-Sim\n2-Não");
                         confirma = entrada.nextInt();
                     } while (confirma != 1);
 
@@ -2731,6 +2732,7 @@ public class SafeSaga {
                     }
 
                     decisao = inicioQuiz();
+                 
 
                     resposta = desafio1(habilidades);
                     do {
@@ -2739,7 +2741,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2753,7 +2755,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2767,7 +2769,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2781,7 +2783,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2795,7 +2797,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2809,7 +2811,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2823,7 +2825,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2837,7 +2839,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2851,7 +2853,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2865,7 +2867,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2879,7 +2881,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2893,7 +2895,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2907,7 +2909,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2921,7 +2923,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2935,7 +2937,7 @@ public class SafeSaga {
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
                         }
                         if (vida == 0) {
                             break;
@@ -2945,43 +2947,53 @@ public class SafeSaga {
 
                         }
                         if (resposta == 1) {
-
+                            vencedor = 1;
+                            break;
                         } else {
                             vida = vida - 20;
                             System.out.println("Você acaba de perde 20% de seus dados: "
-                                    + "voce tem agora somente " + vida + "%");
+                                    + "você tem agora somente " + vida + "%");
+                                                        
                         }
-                        if (vida == 0) {
-                            break;
 
-                        }
-                    } while (vida > 0);
-
-                    break;
+                    } while (vida > 0 && vencedor != 1);
+                     break;
+                     
+                     
+                  
                 case 2:
-                    System.out.println("               Instruções: ");
+                    limpaTela();
+                    System.out.println("                Instruções: ");
+                    System.out.println();
                     System.out.println("A história do jogo se passa no início dos anos 2003,"
                             + " no início da popularização dos computadores no Brasil, a "
-                            + "história se passa na cidade de São Paulo. \n"
-                            + "Safe Saga conta a história de um jovem que vive um grande "
-                            + "desafio em sua vida pois acaba tendo suas informações "
-                            + "roubadas por um hacker mais o grande diferencial é que o "
-                            + "hacker deseja apenas ensinar ao personagem medidas de "
-                            + "segurança da informação. Venha embarcar nesses desafios e "
-                            + "aprender também sobre segurança da informação através de um "
-                            + "jogo para que consiga aplicar na sua própria vida os princípios "
-                            + "ensinados aqui. \n"
-                            + "O objetivo é ensinar a todos como manter nossas informações "
-                            + "seguras em tempos que cada vez mais estamos expostos a "
-                            + "ataques hackers e perda de nossos dados que cada dia que "
-                            + "passa se torna mais e mais importante. \n"
+                            + "história se passa na cidade de São Paulo. Safe Saga conta\n"
+                            + " a história de um jovem que vive um grande desafio em sua\n vida pois acaba\n"
+                            + " tendo suas informações roubadas por um hacker \n"
+                            + "mais o grande diferencial é que o hacker deseja \n"
+                            + "apenas ensinar ao personagem medidas de segurança da\n"
+                            + " informação. Venha embarcar nesses desafios e aprender\n"
+                            + " também sobre segurança da informação através de um jogo\n"
+                            + " para que consiga aplicar na sua própria vida os princípios "
+                            + "ensinados aqui. O objetivo é ensinar a todos como manter\n"
+                            + " nossas informações seguras em tempos que cada vez mais\n"
+                            + " estamos expostos a ataques hackers e perda de nossos dados\n"
+                            + " que cada dia que passa se torna mais e mais importante. \n"
                             + "Venha se divertir com essa história envolvente. ");
+                    System.out.println();
+                    System.out.println();
 
                     System.out.println("Digite o número 0 para retornar ao menu");
 
                     System.out.println("Digite o número 4 para sair do jogo");
-
+                    opcao = entrada.nextInt();
+                    
+                    if (opcao == 0){
+                        limpaTela();
+                        menu();
+                    }
                     break;
+                    
                 case 3:
                     limpaTela();
                     System.out.println("Jogo desenvolvido por:\n"
@@ -2993,27 +3005,32 @@ public class SafeSaga {
                             + " • Vinicius Da Silva Alves");
                     System.out.println();
                     break;
+                  
                 case 4:
+                    System.out.println("");
                     System.out.println("Você selecionou sair.");
                     break;
+                    
                 default:
                     limpaTela();
                     System.out.println("Opção inválida!");
+                    break;
             }
+        } while (opcao != 4 && vida > 0 && vencedor !=1);
 
-        } while (decisao != 4);
-
-        if (decisao == 4) {
-            System.out.println("Espero te ver em breve.");
-        } else if (vida == 0) {
-            System.out.println("Você ate que foi longe demais nunca que voce seria capaz de me vencer,"
-                    + " Felizmente seus dados acabam de ser compartilhados na intenet, agora aguarde as consequencias do que voce acho"
-                    + " que nunca ninguem saberia");
+        if (opcao == 4 ) {
+            System.out.println("Espero revê-lo em breve.");
+        }
+        else if (vida == 0) {
+            System.out.println();
+            System.out.println("Você perdeu todos os dados foram expostos na internet!");
+            
         } else {
             System.out.println("Parabéns, voce chegou ao fim de nosso desafio, espero que tenha aprendido algo com esse jogo"
                     + " pois o intuito alem de ser um jogo para entreterimento pessoal nesse momento de quarentena é para ganhar um maior"
                     + " conhecimentoem um assunto que se torna cada dia mais importante no mundo em que cada vez estamos mais conectados");
         }
 
-    }
+ }
+    
 }
