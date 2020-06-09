@@ -2972,20 +2972,14 @@ public class SafeSaga {
                     System.out.println("                Instruções: ");
                     System.out.println();
                     System.out.println("A história do jogo se passa no início dos anos 2003,"
-                            + " no início da popularização dos computadores no Brasil, a "
-                            + "história se passa na cidade de São Paulo. Safe Saga conta\n"
-                            + " a história de um jovem que vive um grande desafio em sua\n vida pois acaba\n"
-                            + " tendo suas informações roubadas por um hacker \n"
-                            + "mais o grande diferencial é que o hacker deseja \n"
-                            + "apenas ensinar ao personagem medidas de segurança da\n"
-                            + " informação. Venha embarcar nesses desafios e aprender\n"
-                            + " também sobre segurança da informação através de um jogo\n"
-                            + " para que consiga aplicar na sua própria vida os princípios "
-                            + "ensinados aqui. O objetivo é ensinar a todos como manter\n"
-                            + " nossas informações seguras em tempos que cada vez mais\n"
-                            + " estamos expostos a ataques hackers e perda de nossos dados\n"
-                            + " que cada dia que passa se torna mais e mais importante. \n"
-                            + "Venha se divertir com essa história envolvente. ");
+                            + " no início da popularização dos computadores no Brasil, a\n"
+                                   + "história se passa na cidade de São Paulo. Safe Saga conta a história de um jovem que vive um grande desafio\n"
+                                   + " em sua vida pois acaba tendo suas informações roubadas por um hacker mais o grande diferencial é que o hacker deseja \n"
+                            + "apenas ensinar ao personagem medidas de segurança da informação. Venha embarcar nesses desafios e aprender\n"
+                            + " também sobre segurança da informação através de um jogo para que consiga aplicar na sua própria vida os princípios\n"
+                                   + "ensinados aqui. O objetivo é ensinar a todos como manter nossas informações seguras em tempos que cada vez mais\n"
+                            + " estamos expostos a ataques hackers e perda de nossos dados que cada dia que passa se torna mais e mais importante. \n"
+                            + "Venha se divertir com essa história envolvente.");
                     System.out.println();
                     System.out.println();
 
