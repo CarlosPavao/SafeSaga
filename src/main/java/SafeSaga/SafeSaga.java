@@ -1,7 +1,6 @@
-O que outras pessoas estão dizendo
-O  that  OUTRAS  PESSOAS  estao  dizendo
-O que outras pessoas estão dizendo
-importar  java . util . ArrayList ;
+package SafeSaga;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Collections;
 import java.util.List;
@@ -10,10 +9,15 @@ import java.util.Random;
 /*
  Projeto Integrador: Desenvolvimento de lógica
  */
+
 /**
- * Autores: • Alexsandro da Silva Ramos • Carlos Henrique Pavão Inácio •
- * Patricia Ferreira de Sousa • Renan Ferreira Novaes • Rodrigo Dias • Vinicius
- * Da Silva Alves
+ * Autores:
+ * • Alexsandro da Silva Ramos
+ * • Carlos Henrique Pavão Inácio
+ * • * Patricia Ferreira de Sousa
+ * • Renan Ferreira Novaes
+ * • Rodrigo Dias
+ * • Vinicius Da Silva Alves
  */
 public class SafeSaga {
 
@@ -93,10 +97,10 @@ public class SafeSaga {
 
         System.out.println(
                 "As regras são simples. Farei uma série de perguntas pra testar seus conhecimentos sobre segurança da informação;"
-                + " sendo assim, tome muito cuidado ao dar suas respostas, seus dados dependem disso."
-                + " Acredito que você não tenha nenhuma habilidade especial para passar pelo meu “Quis da Redenção” isso poderia estragar meus planos"
-                + " de me divertir com você.\n Você está preparado para começar?\n" + "1-)	Sim, vamos lá.\n"
-                + "0-)	Não, quero sair correndo\n");
+                        + " sendo assim, tome muito cuidado ao dar suas respostas, seus dados dependem disso."
+                        + " Acredito que você não tenha nenhuma habilidade especial para passar pelo meu “Quis da Redenção” isso poderia estragar meus planos"
+                        + " de me divertir com você.\n Você está preparado para começar?\n" + "1-)	Sim, vamos lá.\n"
+                        + "0-)	Não, quero sair correndo\n");
         final Scanner entrada = new Scanner(System.in);
         System.out.println("Digite a opção desejada:");
 
@@ -107,26 +111,26 @@ public class SafeSaga {
         limpaTela();
         System.out.println(
                 "Ao encerrar o chat, você percebe que sua tela congela e um bloco de notas abre no seu monitor com a seguinte mensagem"
-                + " Não precisamos mais do seu e-mail, identificamos que você instalou um programa no qual te deixou totalmente vulnerável. Vários dos seus"
-                + " dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo"
-                + " Você fica completamente desesperado; todos os seus dados, como: Cartão de crédito, senha de banco, senha de redes sociais, e-mail,"
-                + " fotos intimas que você havia mandado para outras pretendentes entre pequenas outras coisas haviam sido roubados.\n\n");
+                        + " Não precisamos mais do seu e-mail, identificamos que você instalou um programa no qual te deixou totalmente vulnerável. Vários dos seus"
+                        + " dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo"
+                        + " Você fica completamente desesperado; todos os seus dados, como: Cartão de crédito, senha de banco, senha de redes sociais, e-mail,"
+                        + " fotos intimas que você havia mandado para outras pretendentes entre pequenas outras coisas haviam sido roubados.\n\n");
         System.out.println(
                 " '- Hacker:'  Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para"
-                + " que algumas coisas não se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair"
-                + " bem com tudo isso, mais forte!!");
+                        + " que algumas coisas não se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair"
+                        + " bem com tudo isso, mais forte!!");
     }
 
     static int decisao2() {
         limpaTela();
         System.out.println(
                 "Ao sair mais cedo do trabalho, você vai correndo comprar seu lanche no Mc2000. Chegando lá, você vê que a fila enorme "
-                + "por conta do horário. Bom, você resolve esperar pacientemente para ser atendido. Neste meio período, você percebe é uma bela garota/garoto "
-                + "abordando as pessoas para fazer uma pesquisa e você até que fica empolgado para poder bater um papo com ela/ele. Chegada a sua vez, ela "
-                + "pergunta se você teria interesse em participar de uma pesquisa sobre provedores de internet e que no final da pesquisa haverá um brinde.\n "
-                + "Você começa a conversar com ela/ele e você sente uma “química” entre vocês dois.\n"
-                + "1-) Preencher todos os dados da pesquisa, pois você quer agradá-la/lo e não poderá fazer essa desfeita.\n"
-                + "2-) Diz que não quer preencher a pesquisa, mas que isso não deveria interferir em uma decisão para um encontro.\n");
+                        + "por conta do horário. Bom, você resolve esperar pacientemente para ser atendido. Neste meio período, você percebe é uma bela garota/garoto "
+                        + "abordando as pessoas para fazer uma pesquisa e você até que fica empolgado para poder bater um papo com ela/ele. Chegada a sua vez, ela "
+                        + "pergunta se você teria interesse em participar de uma pesquisa sobre provedores de internet e que no final da pesquisa haverá um brinde.\n "
+                        + "Você começa a conversar com ela/ele e você sente uma “química” entre vocês dois.\n"
+                        + "1-) Preencher todos os dados da pesquisa, pois você quer agradá-la/lo e não poderá fazer essa desfeita.\n"
+                        + "2-) Diz que não quer preencher a pesquisa, mas que isso não deveria interferir em uma decisão para um encontro.\n");
         final Scanner entrada = new Scanner(System.in);
         System.out.println("Qual sua decisão?");
         return entrada.nextInt();
@@ -136,18 +140,18 @@ public class SafeSaga {
         limpaTela();
         System.out.println(
                 "Ela/Ele agradece muito de passa pela gentileza e diz que irá te mandar uma mensagem de texto para marcar combinar um "
-                + "encontro. Você recebe ao final da pesquisa um CD de provedor de internet. Ela/Ele diz que é uma novidade e que você deveria ver como ela "
-                + "é super simples e leve de ser usado em qualquer máquina. Você não vê problema algum, afinal, isso tudo estava acontecendo dentro de uma "
-                + "grande rede de fast-food.\n ");
+                        + "encontro. Você recebe ao final da pesquisa um CD de provedor de internet. Ela/Ele diz que é uma novidade e que você deveria ver como ela "
+                        + "é super simples e leve de ser usado em qualquer máquina. Você não vê problema algum, afinal, isso tudo estava acontecendo dentro de uma "
+                        + "grande rede de fast-food.\n ");
     }
 
     public static void decisao2Escolha2() {
         limpaTela();
         System.out.println(
                 "Ela/Ele fica um pouco chateado/a com sua resposta, mas diz que gostou muito de você e que, e mesmo assim, lhe dará o "
-                + "brinde sem preencher os dados e que passará o telefone dela/dele. Ele/ela te entrega um CD de provedor e, junto, um papel com o telefone. "
-                + "Você fica muito feliz com a atitude dela/dele e lembra de que de fato queria trocar seu provedor. Você não vê problema algum, afinal, isso "
-                + "tudo estava acontecendo dentro de uma grande rede de fast-food.");
+                        + "brinde sem preencher os dados e que passará o telefone dela/dele. Ele/ela te entrega um CD de provedor e, junto, um papel com o telefone. "
+                        + "Você fica muito feliz com a atitude dela/dele e lembra de que de fato queria trocar seu provedor. Você não vê problema algum, afinal, isso "
+                        + "tudo estava acontecendo dentro de uma grande rede de fast-food.");
         ;
     }
 
@@ -155,13 +159,13 @@ public class SafeSaga {
         limpaTela();
         System.out.println(
                 "Você finalmente consegue comprar seu combo na lanchonete e vai correndo para casa aproveitar seu computador. Claro que "
-                + "você não poderia deixar de instalar o novo CD que você ganhou, porque quando você fosse conversar com ela/ele, teria que ter já algum "
-                + "assunto para iniciar.\n"
-                + "Ao finalizar a instalação, é onde seu pesadelo começa a acontecer. Seu computador congela e aparece uma mensagem 'Seu computador acaba de "
-                + "ser invadido e todos os seus dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo'\n"
-                + " - Hacker: 'Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para que algumas coisas não "
-                + "se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair bem com tudo isso, "
-                + "mais forte!!");
+                        + "você não poderia deixar de instalar o novo CD que você ganhou, porque quando você fosse conversar com ela/ele, teria que ter já algum "
+                        + "assunto para iniciar.\n"
+                        + "Ao finalizar a instalação, é onde seu pesadelo começa a acontecer. Seu computador congela e aparece uma mensagem 'Seu computador acaba de "
+                        + "ser invadido e todos os seus dados foram roubados. Para que eu não libere para o mundo, vamos fazer um jogo'\n"
+                        + " - Hacker: 'Não somos pessoas tão ruins assim, queremos apenas nos divertir e ao mesmo tempo te dar uma lição para que algumas coisas não "
+                        + "se repitam. Para isso, no nosso jogo, iremos te dar a possibilidade de não perder seus dados e que você possa sair bem com tudo isso, "
+                        + "mais forte!!");
     }
 
     static int decisao3() {
@@ -2974,33 +2978,31 @@ public class SafeSaga {
                             + "ensinados aqui. O objetivo é ensinar a todos como manter nossas informações seguras em tempos que cada vez mais\n"
                             + " estamos expostos a ataques hackers e perda de nossos dados que cada dia que passa se torna mais e mais importante. \n"
                             + "Venha se divertir com essa história envolvente.");
-        System.out.println();
-                    
-        System.out.println("            Habilidades");
-        System.out.println();
-        
-        System.out.println("Elas são para facilitar a sua vida no jogo ela só pode ser utilizada a quantidade\n"
-                + " de vezes que você a escolheu você tem o direito de escolher 4 habilidades\n"
-                + " no total exemplo: 2 pular questão, 1 sorte e 1 bônus por acerto.");
-        System.out.println();
-        
-        System.out.println("            Pular");
-        System.out.println("Se não souber a alternativa correta passe para próxima pergunta, essa atual será anulada.");
-        System.out.println();
-        System.out.println("            Sorte");
-        System.out.println("Jogue dois dados se o resultado for maior que 8 você acertou essa pergunta.");
-        System.out.println();
-        System.out.println("            Ajuda dos Universitários");
-        System.out.println("Ficam somente duas alternativas do desafio.");
-        System.out.println();
-        System.out.println("            Visão além do alcance");
-        System.out.println("Revela a resposta correta.");
-                    
                     System.out.println();
-                    
-                    
-               
-                    
+
+                    System.out.println("            Habilidades");
+                    System.out.println();
+
+                    System.out.println("Elas são para facilitar a sua vida no jogo ela só pode ser utilizada a quantidade\n"
+                            + " de vezes que você a escolheu você tem o direito de escolher 4 habilidades\n"
+                            + " no total exemplo: 2 pular questão, 1 sorte e 1 bônus por acerto.");
+                    System.out.println();
+
+                    System.out.println("            Pular");
+                    System.out.println("Se não souber a alternativa correta passe para próxima pergunta, essa atual será anulada.");
+                    System.out.println();
+                    System.out.println("            Sorte");
+                    System.out.println("Jogue dois dados se o resultado for maior que 8 você acertou essa pergunta.");
+                    System.out.println();
+                    System.out.println("            Ajuda dos Universitários");
+                    System.out.println("Ficam somente duas alternativas do desafio.");
+                    System.out.println();
+                    System.out.println("            Visão além do alcance");
+                    System.out.println("Revela a resposta correta.");
+
+                    System.out.println();
+
+
                     System.out.println();
                     System.out.println();
 
@@ -3065,3 +3067,4 @@ public class SafeSaga {
 
     }
 }
+
